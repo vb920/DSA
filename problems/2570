@@ -1,0 +1,31 @@
+# 2570. Merge Two 2D Arrays by Summing Values
+🔁 Iteration 1
+
+**Pattern:** Two Pointers 
+
+**Difficulty:** Easy 
+
+**Time:** 10m
+
+**Solo:** Y
+
+### 🧠 Core Logic
+* **The Trick:** Arrays are already sorted -> Skip the HashMap, use Two Pointers.
+* **Execution:**
+  1. Compare IDs: Append smaller ID, advance its pointer.
+  2. If IDs match: Sum values, append, advance *both* pointers.
+  3. Flush remaining elements from both arrays.
+* **Complexity:** 
+
+Time `O(N + M)`
+
+ Space `O(N + M)`
+
+### 🚨 Traps & Bugs
+* **Edge Case:** Arrays of different lengths (trailing `while` loops are required).
+* **My Bugs:** None. Cleanly handled the `<`, `>`, and `==` conditions.
+
+### 🎤 1-Sentence Pitch
+* "Instead of an `O((N+M) log(N+M))` TreeMap, we optimize to `O(N + M)` using **Two Pointers** by leveraging the pre-sorted input."
+
+---
