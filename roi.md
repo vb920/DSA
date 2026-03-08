@@ -388,4 +388,223 @@
 * Design Hit Counter
 * Maximum Frequency Stack
 
+### Matrix
+* Transpose Matrix
+* Rotate Image
+* Set Matrix Zeroes
+* Spiral Matrix
+* Spiral Matrix II
+* Diagonal Traverse
+* Sort the Matrix Diagonally
+* Valid Sudoku
+* Game of Life
+* Where Will the Ball Fall
+* Rotating the Box
+* Queens That Can Attack the King
+* Find Valid Matrix Given Row and Column Sums
+* Valid Tic-Tac-Toe State
+* Number of Islands
+* Max Area of Island
+* Surrounded Regions
+* Rotting Oranges
+* Pacific Atlantic Water Flow
+* Walls and Gates
+* Shortest Path in Binary Matrix
+* Flood Fill
+* Matrix Block Sum
+* Increment Submatrices by One
+* Count Square Submatrices with All Ones
+* Maximal Square
+* Number of Submatrices with All Ones
+* Maximal Rectangle
+* Submatrix Sum Equals K
+* Largest Submatrix with Rearrangements
 
+### Greedy
+* Assign Cookies
+* Boats to Save People
+* Bag of Tokens
+* Advantage Shuffle
+* Non-Overlapping Intervals
+* Minimum Number of Arrows to Burst Balloons
+* Video Stitching
+* Divide Intervals into Minimum Number of Groups
+* Jump Game
+* Jump Game II
+* Gas Station
+* Candy
+* Reorganize String
+* Task Scheduler
+* Course Schedule III
+* IPO
+* Remove Duplicate Letters
+* Partition Labels
+* Optimal Partition of String
+* Patching Array
+
+
+## Intervals -20
+- Missing Ranges 
+- Remove Interval 
+- Add Bold Tag in String 
+- Insert Interval 
+- Merge Intervals 
+- Non Overlapping Intervals 
+- Interval List Intersections 
+- Meeting Rooms 
+- Meeting Rooms II 
+- Meeting Rooms III 
+- Divide Intervals Into Minimum Number of Groups	
+- Remove Covered Intervals	
+- Minimum Number of Arrows to Burst Balloons	
+- The Number of the Smallest Unoccupied Chair	
+- Check if Grid can be Cut into Sections	
+- My Calendar I	
+- My Calendar II	
+- Count Days Without Meetings	
+- Minimum Interval to Include Each Query 
+- Data Stream as Disjoint Intervals
+
+- 
+## Range Queries - 23
+- Static Range Sum Queries
+- Static Range Minimum Queries
+- Dynamic Range Sum Queries
+- Dynamic Range Minimum Queries
+- Range Xor Queries
+- Range Update Queries
+- Forest Queries
+- Hotel Queries
+- List Removals
+- Salary Queries
+- Prefix Sum Queries
+- Pizzeria Queries
+- Visible Buildings Queries
+- Range Interval Queries
+- Subarray Sum Queries
+- Subarray Sum Queries II
+- Distinct Values Queries
+- Distinct Values Queries II
+- Increasing Array Queries
+- Movie Festival Queries
+- Forest Queries II
+- Range Updates and Sums
+- Polynomial Queries
+- Range Queries and Copies
+- Missing Coin Sum Queries
+
+## Tree Algorithms - 15
+- Subordinates
+- Tree Matching
+- Tree Diameter
+- Tree Distances I
+- Tree Distances II
+- Company Queries I
+- Company Queries II
+- Distance Queries
+- Counting Paths
+- Subtree Queries
+- Path Queries
+- Path Queries II
+- Distinct Colors
+- Finding a Centroid
+- Fixed-Length Paths I
+- Fixed-Length Paths II
+- Mathematics
+
+
+## Prefix Sum - 15
+- Range Sum Query - Immutable
+- Left and Right Sum Differences
+- Count Vowel Strings in Ranges
+- Minimum Penalty for a Shop
+- Find Good Days to Rob the Bank
+- Sum of Absolute Differences in a Sorted Array
+- Product of Array Except Self
+- Product of the Last K Numbers
+- Removing Minimum Number of Magic Beans
+- Find All Good Indices
+- Movement of Robots
+- Range Sum Query 2D - Immutable
+- Increment Submatrices by One
+- Power of Heroes
+- Minimum Cost to Make Array Equal
+
+
+## Sliding Window - 37
+- Substrings of Size Three with Distinct Characters
+- Find All Anagrams in a String
+- Permutation in String
+- Check If a String Contains All Binary Codes of Size K
+- Maximum Number of Vowels in a Substring of Given Length
+- Maximum Average Subarray I
+- Number of Sub-arrays of Size K and Average Greater than or Equal to Threshold
+- K Radius Subarray Averages
+- Maximum Sum of Distinct Subarrays With Length K
+- Sliding Subarray Beauty
+- Maximum Points You Can Obtain from Cards
+- Sliding Window Median
+- Sliding Window Maximum
+- Max Value of Equation
+- Maximum Sum of 3 Non-Overlapping Subarrays
+- Longest Substring Without Repeating Characters
+- Longest Repeating Character Replacement
+- Maximum Number of Occurrences of a Substring
+- Max Consecutive Ones III
+- Count the Number of Substrings With Dominant Ones
+- Minimum Window Substring
+- Substring with Concatenation of All Words
+- Minimum Size Subarray Sum
+- Longest Continuous Subarray With Absolute Diff Less Than or Equal to Limit
+- Fruit Into Baskets
+- Subarray Product Less Than K
+- Grumpy Bookstore Owner
+- Moving Stones Until Consecutive II
+- Count Number of Nice Subarrays
+- Number of Subarrays with Bounded Maximum
+- Maximum Erasure Value
+- Longest Subarray of 1's After Deleting One Element
+- Count the Number of Good Subarrays
+- Minimum Consecutive Cards to Pick Up
+- Minimum Operations to Reduce X to Zero
+- Frequency of the Most Frequent Element
+- Subarrays with K Different Integers
+
+
+## Linked List - 25
+- Convert Binary Number in a Linked List to Integer
+- Intersection of Two Linked Lists
+- Middle of the Linked List
+- Linked List Cycle
+- Linked List Cycle II
+- Reverse Linked List
+- Palindrome Linked List
+- Reverse Nodes in k-Group
+- Odd Even Linked List
+- Remove Duplicates from Sorted List
+- Remove Nth Node From End of List
+- Delete the Middle Node of a Linked List
+- Add Two Numbers
+- Sort List
+- Linked List Random Node
+- Copy List with Random Pointer
+- Merge Two Sorted Lists
+- Merge k Sorted Lists
+
+- 
+## Queue - 16
+- Implement Stack using Queues
+- Implement Queue using Stacks
+- Design Circular Queue
+- Design Front Middle Back Queue
+- Dota2 Senate
+- Find the Winner of the Circular Game
+- Reveal Cards in Increasing Order
+- Minimum Number of K Consecutive Bit Flips
+- Stamping the Sequence
+- Design Circular Deque
+- Jump Game VI
+- Continuous Subarrays
+- Max Value of Equation
+- Sliding Window Maximum
+- Shortest Subarray with Sum at Least K
