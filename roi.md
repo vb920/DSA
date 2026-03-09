@@ -608,3 +608,29 @@
 - Max Value of Equation
 - Sliding Window Maximum
 - Shortest Subarray with Sum at Least K
+  
+### Two Pointers
+
+Valid Palindrome
+Valid Palindrome II
+Remove Duplicates from Sorted Array
+Remove Element
+Merge Sorted Array
+Container With Most Water
+3Sum
+3Sum Closest
+Sort Colors (Dutch National Flag)
+Rotate Array
+Reverse Words in a String / Reverse Words in a String III
+String Compression
+4Sum
+Partition Array According to Given Pivot
+Reverse Vowels of a String
+Next Permutation
+Next Greater Element III
+Lexicographically Smallest Palindrome
+DI String Match
+Minimum Length of String After Deleting Similar Ends
+Separate Black and White Balls
+Sort Array by Parity
+Shortest Distance to a Character
