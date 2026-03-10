@@ -442,7 +442,6 @@
 * Optimal Partition of String
 * Patching Array
 
-
 ## Intervals -20
 - Missing Ranges 
 - Remove Interval 
@@ -465,7 +464,6 @@
 - Minimum Interval to Include Each Query 
 - Data Stream as Disjoint Intervals
 
-- 
 ## Range Queries - 23
 - Static Range Sum Queries
 - Static Range Minimum Queries
@@ -512,7 +510,6 @@
 - Fixed-Length Paths II
 - Mathematics
 
-
 ## Prefix Sum - 15
 - Range Sum Query - Immutable
 - Left and Right Sum Differences
@@ -530,48 +527,39 @@
 - Power of Heroes
 - Minimum Cost to Make Array Equal
 
-
-## Sliding Window - 37
-- Substrings of Size Three with Distinct Characters
-- Find All Anagrams in a String
-- Permutation in String
-- Check If a String Contains All Binary Codes of Size K
+## Sliding Window 
+- Longest Substring Without Repeating Characters
+- Max Consecutive Ones III
+- Minimum Size Subarray Sum
+- Subarray Product Less Than K
 - Maximum Number of Vowels in a Substring of Given Length
 - Maximum Average Subarray I
 - Number of Sub-arrays of Size K and Average Greater than or Equal to Threshold
-- K Radius Subarray Averages
-- Maximum Sum of Distinct Subarrays With Length K
-- Sliding Subarray Beauty
-- Maximum Points You Can Obtain from Cards
-- Sliding Window Median
-- Sliding Window Maximum
-- Max Value of Equation
-- Maximum Sum of 3 Non-Overlapping Subarrays
-- Longest Substring Without Repeating Characters
-- Longest Repeating Character Replacement
-- Maximum Number of Occurrences of a Substring
-- Max Consecutive Ones III
-- Count the Number of Substrings With Dominant Ones
 - Minimum Window Substring
-- Substring with Concatenation of All Words
-- Minimum Size Subarray Sum
-- Longest Continuous Subarray With Absolute Diff Less Than or Equal to Limit
+- Find All Anagrams in a String
+- Permutation in String
 - Fruit Into Baskets
-- Subarray Product Less Than K
-- Grumpy Bookstore Owner
-- Moving Stones Until Consecutive II
-- Count Number of Nice Subarrays
-- Number of Subarrays with Bounded Maximum
-- Maximum Erasure Value
-- Longest Subarray of 1's After Deleting One Element
-- Count the Number of Good Subarrays
-- Minimum Consecutive Cards to Pick Up
+- Longest Repeating Character Replacement
+- Sliding Window Maximum
+- Longest Continuous Subarray With Absolute Diff Less Than or Equal to Limit
+- Maximum Points You Can Obtain from Cards
 - Minimum Operations to Reduce X to Zero
 - Frequency of the Most Frequent Element
 - Subarrays with K Different Integers
+- Count Number of Nice Subarrays
+- Sliding Window Median
+- Max Value of Equation
+- Maximum Sum of 3 Non-Overlapping Subarrays
+- Number of Subarrays with Bounded Maximum
+- Maximum Erasure Value
+- Substring with Concatenation of All Words
+- K Radius Subarray Averages
+- Check If a String Contains All Binary Codes of Size K
+- Count the Number of Good Subarrays
+- Minimum Consecutive Cards to Pick Up
+- Moving Stones Until Consecutive II
 
-
-## Linked List - 25
+## Linked List 
 - Convert Binary Number in a Linked List to Integer
 - Intersection of Two Linked Lists
 - Middle of the Linked List
