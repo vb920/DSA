@@ -588,4 +588,21 @@
 - Separate Black and White Balls
 - Sort Array by Parity
 - Shortest Distance to a Character
+
+## Range Queries
+- 307. Range Sum Query – Mutable
+- 315. Count of Smaller Numbers After Self
+- 493. Reverse Pairs
+- 327. Count of Range Sum
+- 1649. Create Sorted Array through Instructions
+- 2407. Longest Increasing Subsequence II
+- 699. Falling Squares
+- 732. My Calendar III
+- 715. Range Module
+- 218. The Skyline Problem
+- 850. Rectangle Area II
+- 2569. Handling Sum Queries After Update
+- 2080. Range Frequency Queries
+- 2426. Number of Pairs Satisfying Inequality
+- 2250. Count Number of Rectangles Containing Each Point
 ---
