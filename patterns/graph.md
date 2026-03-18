@@ -810,7 +810,7 @@ public static boolean cycleUF(int n, List<int[]> edges) {
     }
     return false;
 }
-
+```
 ---
 
 ## 9. Union-Find (DSU)
