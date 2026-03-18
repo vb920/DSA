@@ -297,16 +297,35 @@ public static int longestSubarraySumK(int[] a, int k) {
 ### Variation: Count Subarrays with Sum in Range [lo, hi]
 
 ```java
-def count_sum_in_range(a, lo, hi):
-    """Count subarrays with sum in [lo, hi]."""
-    # count(sum ≤ hi) - count(sum ≤ lo - 1)
-    return _count_at_most(a, hi) - _count_at_most(a, lo - 1)
+public static long countSumInRange(int[] a, long lo, long hi) {
+    return countAtMost(a, hi) - countAtMost(a, lo - 1);
+}
 
-def _count_at_most(a, target):
-    """Count subarrays with sum ≤ target. Uses sorted container or merge sort."""
-    # For general arrays (with negatives), this requires more advanced DS
-    # For non-negative arrays, sliding window works
-    pass
+private static long countAtMost(int[] a, long target) {
+    long count = 0;
+    long prefix = 0;
+
+    // TreeMap: prefixSum -> frequency
+    TreeMap<Long, Integer> map = new TreeMap<>();
+    map.put(0L, 1); // empty prefix
+
+    for (int x : a) {
+        prefix += x;
+
+        // We need previous prefix sums p such that:
+        // prefix - p <= target  =>  p >= prefix - target
+        long lower = prefix - target;
+
+        // Get all prefix sums p >= lower
+        for (long key : map.tailMap(lower, true).keySet()) {
+            count += map.get(key);
+        }
+
+        map.put(prefix, map.getOrDefault(prefix, 0) + 1);
+    }
+
+    return count;
+}
 ```
 
 ### Complexity
@@ -714,33 +733,53 @@ This pattern works for any operation where you can combine left and right parts:
 - **GCD except self**: `gcd(prefix_gcd[i-1], suffix_gcd[i+1])`
 
 ```java
-from math import gcd
-from functools import reduce
+import java.util.*;
 
-def gcd_except_self(a):
-    n = len(a)
-    prefix_gcd = [0] * n
-    suffix_gcd = [0] * n
+public class GcdExceptSelf {
 
-    prefix_gcd[0] = a[0]
-    for i in range(1, n):
-        prefix_gcd[i] = gcd(prefix_gcd[i-1], a[i])
+    // If using Java < 18, replace Math.gcd with this custom function:
+    public static int gcd(int a, int b) {
+        if (b == 0) return Math.abs(a);
+        return gcd(b, a % b);
+    }
 
-    suffix_gcd[n-1] = a[n-1]
-    for i in range(n-2, -1, -1):
-        suffix_gcd[i] = gcd(a[i], suffix_gcd[i+1])
+    public static int[] gcdExceptSelf(int[] a) {
+        int n = a.length;
+        int[] prefix = new int[n];
+        int[] suffix = new int[n];
+        int[] result = new int[n];
 
-    result = [0] * n
-    for i in range(n):
-        left = prefix_gcd[i-1] if i > 0 else 0
-        right = suffix_gcd[i+1] if i < n-1 else 0
-        if left == 0:
-            result[i] = right
-        elif right == 0:
-            result[i] = left
-        else:
-            result[i] = gcd(left, right)
-    return result
+        // Build prefix GCDs
+        prefix[0] = a[0];
+        for (int i = 1; i < n; i++) {
+            prefix[i] = gcd(prefix[i - 1], a[i]);
+        }
+
+        // Build suffix GCDs
+        suffix[n - 1] = a[n - 1];
+        for (int i = n - 2; i >= 0; i--) {
+            suffix[i] = gcd(a[i], suffix[i + 1]);
+        }
+
+        // Build result
+        for (int i = 0; i < n; i++) {
+            int left = (i > 0) ? prefix[i - 1] : 0;
+            int right = (i < n - 1) ? suffix[i + 1] : 0;
+
+            if (left == 0) result[i] = right;
+            else if (right == 0) result[i] = left;
+            else result[i] = gcd(left, right);
+        }
+
+        return result;
+    }
+
+    // For testing
+    public static void main(String[] args) {
+        int[] a = {12, 15, 18, 9};
+        System.out.println(Arrays.toString(gcdExceptSelf(a)));
+    }
+}
 ```
 
 ---
@@ -874,35 +913,51 @@ class TreePrefixSum {
 ### Implementation — Difference on Tree (Counting Paths)
 
 ```java
-def count_paths_through_nodes(n, adj, paths):
-    """
-    Given paths [(u, v), ...], count how many paths pass through each node.
-    Uses difference on tree technique.
-    """
-    # Setup LCA (assume already built as above)
-    # ...
+public static int[] countPathsThroughNodes(
+        int n,
+        List<Integer>[] adj,
+        int[][] parent,     // parent[k][v]
+        int[][] paths,      // list of {u, v}
+        java.util.function.BiFunction<Integer, Integer, Integer> lcaFunc
+) {
+    int[] diff = new int[n];
 
-    diff = [0] * n
-    for u, v in paths:
-        l = lca(u, v)
-        diff[u] += 1
-        diff[v] += 1
-        diff[l] -= 1
-        p = parent[0][l]
-        if p != -1:
-            diff[p] -= 1
+    // Apply difference marks for each path
+    for (int[] p : paths) {
+        int u = p[0];
+        int v = p[1];
 
-    # DFS to accumulate subtree sums
-    answer = [0] * n
-    def dfs(u, par):
-        answer[u] = diff[u]
-        for v in adj[u]:
-            if v != par:
-                dfs(v, u)
-                answer[u] += answer[v]
+        int l = lcaFunc.apply(u, v);
 
-    dfs(0, -1)
-    return answer
+        diff[u] += 1;
+        diff[v] += 1;
+        diff[l] -= 1;
+
+        int parentOfL = parent[0][l];
+        if (parentOfL != -1) {
+            diff[parentOfL] -= 1;
+        }
+    }
+
+    int[] answer = new int[n];
+    dfsAccumulate(0, -1, adj, diff, answer);
+    return answer;
+}
+
+private static void dfsAccumulate(
+        int u, int par,
+        List<Integer>[] adj,
+        int[] diff,
+        int[] answer
+) {
+    answer[u] = diff[u];
+    for (int v : adj[u]) {
+        if (v != par) {
+            dfsAccumulate(v, u, adj, diff, answer);
+            answer[u] += answer[v];
+        }
+    }
+}
 ```
 
 ### Classic Problems
@@ -947,29 +1002,59 @@ public static int minSubarrayWithSumAtLeast(int[] a, int target) {
 ### Pattern: Count Subarrays with Sum in [lo, hi] (Non-Negative)
 
 ```java
-from bisect import bisect_left, bisect_right
+import java.util.Arrays;
 
-def count_subarrays_sum_in_range(a, lo, hi):
-    """
-    Count subarrays with sum in [lo, hi].
-    Assumes all elements non-negative (prefix sums are sorted).
-    """
-    n = len(a)
-    pre = [0] * (n + 1)
-    for i in range(n):
-        pre[i + 1] = pre[i] + a[i]
+public class SubarraySumRange {
 
-    count = 0
-    for j in range(1, n + 1):
-        # Need lo ≤ pre[j] - pre[i] ≤ hi
-        # → pre[j] - hi ≤ pre[i] ≤ pre[j] - lo
-        low_bound = pre[j] - hi
-        high_bound = pre[j] - lo
-        # Count i in [0, j) where low_bound ≤ pre[i] ≤ high_bound
-        left = bisect_left(pre, low_bound, 0, j)
-        right = bisect_right(pre, high_bound, 0, j)
-        count += right - left
+    public static long countSubarraysSumInRange(int[] a, long lo, long hi) {
+        int n = a.length;
+        long[] pre = new long[n + 1];
 
+        // Build prefix sums
+        for (int i = 0; i < n; i++) {
+            pre[i + 1] = pre[i] + a[i];
+        }
+
+        long count = 0;
+
+        for (int j = 1; j <= n; j++) {
+            long lowBound = pre[j] - hi;   // pre[i] >= lowBound
+            long highBound = pre[j] - lo;  // pre[i] <= highBound
+
+            // Count i in [0, j) where lowBound ≤ pre[i] ≤ highBound
+            int left = lowerBound(pre, 0, j, lowBound);
+            int right = upperBound(pre, 0, j, highBound);
+
+            count += (right - left);
+        }
+
+        return count;
+    }
+
+    // Equivalent to bisect_left
+    private static int lowerBound(long[] arr, int from, int to, long target) {
+        int pos = Arrays.binarySearch(arr, from, to, target);
+        if (pos < 0) {
+            pos = -pos - 1;   // insertion point
+        }
+        return pos;
+    }
+
+    // Equivalent to bisect_right
+    private static int upperBound(long[] arr, int from, int to, long target) {
+        int pos = Arrays.binarySearch(arr, from, to, target);
+
+        if (pos < 0) {
+            pos = -pos - 1;   // insertion point
+        } else {
+            // Move past duplicates
+            while (pos < to && arr[pos] == target) {
+                pos++;
+            }
+        }
+        return pos;
+    }
+}
     return count
 ```
 
@@ -978,23 +1063,58 @@ def count_subarrays_sum_in_range(a, lo, hi):
 If the array can have negative values, prefix sums aren't sorted. Use a **balanced BST** (like `SortedList` from `sortedcontainers`) or a **BIT/Fenwick tree** with coordinate compression.
 
 ```java
-from sortedcontainers import SortedList
+import java.util.Arrays;
 
-def count_subarrays_sum_in_range_general(a, lo, hi):
-    """Works even with negative values."""
-    sl = SortedList([0])  # prefix sums seen so far
-    current_sum = 0
-    count = 0
+public class SubarraySumRange {
 
-    for x in a:
-        current_sum += x
-        # Count previous prefix sums in [current_sum - hi, current_sum - lo]
-        left = sl.bisect_left(current_sum - hi)
-        right = sl.bisect_right(current_sum - lo)
-        count += right - left
-        sl.add(current_sum)
+    public static long countSubarraysSumInRange(int[] a, long lo, long hi) {
+        int n = a.length;
+        long[] pre = new long[n + 1];
 
-    return count
+        // Build prefix sum
+        for (int i = 0; i < n; i++) {
+            pre[i + 1] = pre[i] + a[i];
+        }
+
+        long count = 0;
+
+        for (int j = 1; j <= n; j++) {
+            long lowBound = pre[j] - hi;
+            long highBound = pre[j] - lo;
+
+            // bisect_left(pre, lowBound, 0, j)
+            int left = lowerBound(pre, 0, j, lowBound);
+
+            // bisect_right(pre, highBound, 0, j)
+            int right = upperBound(pre, 0, j, highBound);
+
+            count += (right - left);
+        }
+
+        return count;
+    }
+
+    // Equivalent to bisect_left
+    private static int lowerBound(long[] arr, int from, int to, long target) {
+        int pos = Arrays.binarySearch(arr, from, to, target);
+        if (pos < 0) pos = -pos - 1;
+        return pos;
+    }
+
+    // Equivalent to bisect_right
+    private static int upperBound(long[] arr, int from, int to, long target) {
+        int pos = Arrays.binarySearch(arr, from, to, target);
+        if (pos < 0) {
+            pos = -pos - 1;
+        } else {
+            // Move to the right past duplicates
+            while (pos < to && arr[pos] == target) {
+                pos++;
+            }
+        }
+        return pos;
+    }
+}
 ```
 
 ### Complexity
@@ -1156,27 +1276,34 @@ public static int countCharInRange(int[][] pre, int l, int r, char ch) {
 Track running maximum or minimum from both ends.
 
 ```java
-def trapping_rain_water(height):
-    """Classic problem: how much water can be trapped?"""
-    n = len(height)
-    if n == 0:
-        return 0
+public static int trapRainWater(int[] height) {
+    int n = height.length;
+    if (n == 0) return 0;
 
-    left_max = [0] * n
-    right_max = [0] * n
+    int[] leftMax = new int[n];
+    int[] rightMax = new int[n];
 
-    left_max[0] = height[0]
-    for i in range(1, n):
-        left_max[i] = max(left_max[i-1], height[i])
+    // Build left max array
+    leftMax[0] = height[0];
+    for (int i = 1; i < n; i++) {
+        leftMax[i] = Math.max(leftMax[i - 1], height[i]);
+    }
 
-    right_max[n-1] = height[n-1]
-    for i in range(n-2, -1, -1):
-        right_max[i] = max(right_max[i+1], height[i])
+    // Build right max array
+    rightMax[n - 1] = height[n - 1];
+    for (int i = n - 2; i >= 0; i--) {
+        rightMax[i] = Math.max(rightMax[i + 1], height[i]);
+    }
 
-    water = 0
-    for i in range(n):
-        water += min(left_max[i], right_max[i]) - height[i]
-    return water
+    // Calculate trapped water
+    int water = 0;
+    for (int i = 0; i < n; i++) {
+        water += Math.min(leftMax[i], rightMax[i]) - height[i];
+    }
+
+    return water;
+}
+``
 ```
 
 ### Pattern E: Sweep Line + Difference Array
@@ -1184,20 +1311,29 @@ def trapping_rain_water(height):
 Count overlapping intervals using difference array.
 
 ```java
-def max_overlapping_intervals(intervals, max_val):
-    """Find maximum number of overlapping intervals."""
-    diff = [0] * (max_val + 2)
-    for start, end in intervals:
-        diff[start] += 1
-        diff[end + 1] -= 1
+public static int maxOverlappingIntervals(int[][] intervals, int maxVal) {
+    int[] diff = new int[maxVal + 2];
 
-    # Prefix sum = count of active intervals at each point
-    max_overlap = 0
-    current = 0
-    for i in range(max_val + 1):
-        current += diff[i]
-        max_overlap = max(max_overlap, current)
-    return max_overlap
+    // Apply difference array updates
+    for (int[] interval : intervals) {
+        int start = interval[0];
+        int end = interval[1];
+
+        diff[start] += 1;
+        diff[end + 1] -= 1;
+    }
+
+    int maxOverlap = 0;
+    int current = 0;
+
+    // Prefix sum builds the actual active count at each point
+    for (int i = 0; i <= maxVal; i++) {
+        current += diff[i];
+        maxOverlap = Math.max(maxOverlap, current);
+    }
+
+    return maxOverlap;
+}
 ```
 
 ### Pattern F: Prefix Sum + Two Pointers
@@ -1205,18 +1341,25 @@ def max_overlapping_intervals(intervals, max_val):
 For non-negative arrays, find subarrays with exact sum.
 
 ```java
-def subarray_with_sum(a, target):
-    """Find subarray with exact sum (non-negative elements)."""
-    current = 0
-    left = 0
-    for right in range(len(a)):
-        current += a[right]
-        while current > target and left <= right:
-            current -= a[left]
-            left += 1
-        if current == target:
-            return (left, right)
-    return None
+public static int[] subarrayWithSum(int[] a, int target) {
+    int current = 0;
+    int left = 0;
+
+    for (int right = 0; right < a.length; right++) {
+        current += a[right];
+
+        while (current > target && left <= right) {
+            current -= a[left];
+            left++;
+        }
+
+        if (current == target) {
+            return new int[]{left, right};
+        }
+    }
+
+    return null; // no subarray found
+}
 ```
 
 ---
