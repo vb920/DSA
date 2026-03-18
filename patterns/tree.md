@@ -13,6 +13,8 @@
 | Compute DP for **every node as root** | Rerooting DP | [4](#4-rerooting-dp) |
 | Find **diameter / center** of tree | Two-BFS or Tree DP | [5](#5-tree-diameter-and-center) |
 | Compute DP on subtrees | Tree DP | [6](#6-tree-dp-patterns) |
+| Tree Properties| Basic Techniques |[7](#7-basic-tree-properties) |
+
 ---
 
 ## Table of Contents
@@ -23,7 +25,8 @@
 4. [Rerooting DP](#4-rerooting-dp)
 5. [Tree Diameter and Center](#5-tree-diameter-and-center)
 6. [Tree DP Patterns](#6-tree-dp-patterns)
-7. [Pattern Recognition Cheat Sheet](#7-pattern-recognition-cheat-sheet)
+7. [Tree Properties](#7-basic-tree-properties)
+8. [Pattern Recognition Cheat Sheet](#8-pattern-recognition-cheat-sheet)
 ---
 
 ***
@@ -370,7 +373,7 @@ public class EulerTour {
 
 ***
 
-## 3) Lowest Common Ancestor (LCA) — **Binary Lifting**
+## 3) Lowest Common Ancestor
 
 
 ```
@@ -856,8 +859,263 @@ public class PathThroughNode {
 ```
 
 ***
+## 7) Basic Tree Properties 
 
-## 7) Pattern Recognition Cheat Sheet 
+
+### 2.1) **Maximum Depth of Binary Tree**
+
+**Invariant.** Height of a node `u` is `1 + max(height(u.left), height(u.right))`; height of `null` is `0`. The tree’s maximum depth is the height of the root.
+
+**Idea**  
+Compute heights **post‑order** (children first, then node). BFS level‑count also works (number of layers).
+
+**Implementation (post‑order DFS)**
+
+```java
+// Definition for a binary tree node.
+// class TreeNode { int val; TreeNode left, right; TreeNode(int x){val=x;} }
+
+class SolutionMaxDepth {
+    public int maxDepth(TreeNode root) {
+        if (root == null) return 0;
+        int L = maxDepth(root.left);
+        int R = maxDepth(root.right);
+        return 1 + Math.max(L, R);
+    }
+}
+```
+
+**Alternative (BFS level count)**
+
+```java
+class SolutionMaxDepthBFS {
+    public int maxDepth(TreeNode root) {
+        if (root == null) return 0;
+        java.util.ArrayDeque<TreeNode> q = new java.util.ArrayDeque<>();
+        q.add(root);
+        int depth = 0;
+        while (!q.isEmpty()) {
+            int sz = q.size();
+            while (sz-- > 0) {
+                TreeNode cur = q.removeFirst();
+                if (cur.left  != null) q.addLast(cur.left);
+                if (cur.right != null) q.addLast(cur.right);
+            }
+            depth++;
+        }
+        return depth;
+    }
+}
+```
+
+**Notes**
+
+*   Time `O(n)`, space `O(h)` recursion (worst `O(n)`), or `O(w)` for BFS.
+*   DFS is shorter; BFS is sometimes clearer when asked “levels.”
+
+***
+
+### 2.2) **Minimum Depth of Binary Tree**
+
+**Invariant.** Minimum depth = nodes on the **shortest root‑to‑leaf** path. A **leaf** is a node with **no** children.
+
+**Common trap**  
+You **cannot** do `1 + min(minDepth(left), minDepth(right))` when one child is `null`—you’d “short‑circuit” through a non‑existent subtree.
+
+**Idea**
+
+*   **BFS**: the first leaf you pop gives the min depth (stop early).
+*   **DFS**: handle the **single‑child** case explicitly.
+
+**Implementation (safe DFS)**
+
+```java
+class SolutionMinDepth {
+    public int minDepth(TreeNode root) {
+        if (root == null) return 0;
+        int L = minDepth(root.left);
+        int R = minDepth(root.right);
+        if (root.left == null)  return 1 + R; // must go right
+        if (root.right == null) return 1 + L; // must go left
+        return 1 + Math.min(L, R);
+    }
+}
+```
+
+**Alternative (BFS early exit)**
+
+```java
+class SolutionMinDepthBFS {
+    public int minDepth(TreeNode root) {
+        if (root == null) return 0;
+        java.util.ArrayDeque<TreeNode> q = new java.util.ArrayDeque<>();
+        q.add(root);
+        int depth = 1;
+        while (!q.isEmpty()) {
+            int sz = q.size();
+            while (sz-- > 0) {
+                TreeNode cur = q.removeFirst();
+                if (cur.left == null && cur.right == null) return depth; // first leaf
+                if (cur.left  != null) q.addLast(cur.left);
+                if (cur.right != null) q.addLast(cur.right);
+            }
+            depth++;
+        }
+        return depth;
+    }
+}
+```
+
+**Notes**
+
+*   Time `O(n)`. DFS space `O(h)`; BFS space `O(w)`.
+*   Prefer BFS if you want the shortest level quickly.
+
+***
+
+### 2.3) **Balanced Binary Tree** (height‑balanced)
+
+**Invariant.** A tree is balanced iff **every** node satisfies `|height(left) − height(right)| ≤ 1`.
+
+**Idea**  
+Bottom‑up **post‑order**: return subtree height; if any child is unbalanced, bubble up a **sentinel** (e.g., `-1`) to short‑circuit.
+
+**Implementation (post‑order with sentinel)**
+
+```java
+class SolutionBalanced {
+    public boolean isBalanced(TreeNode root) {
+        return height(root) != -1;
+    }
+    private int height(TreeNode node) {
+        if (node == null) return 0;
+        int LH = height(node.left);  if (LH == -1) return -1;
+        int RH = height(node.right); if (RH == -1) return -1;
+        if (Math.abs(LH - RH) > 1) return -1;
+        return 1 + Math.max(LH, RH);
+    }
+}
+```
+
+**Notes**
+
+*   Time `O(n)` (each node once), space `O(h)`.
+*   Avoid top‑down “recompute heights” (`O(n^2)` worst‑case).
+
+***
+
+### 2.4) **Symmetric Tree** (mirror check)
+
+**Invariant.** A tree is symmetric iff `left` is a **mirror** of `right`:  
+`isMirror(a, b) = (a == null && b == null) || (a != null && b != null && a.val == b.val && isMirror(a.left, b.right) && isMirror(a.right, b.left))`.
+
+**Idea**  
+Compare **cross children**: `a.left` ↔ `b.right` and `a.right` ↔ `b.left`.
+
+**Implementation (paired recursion)**
+
+```java
+class SolutionSymmetric {
+    public boolean isSymmetric(TreeNode root) {
+        return root == null || isMirror(root.left, root.right);
+    }
+    private boolean isMirror(TreeNode a, TreeNode b) {
+        if (a == null || b == null) return a == b;
+        if (a.val != b.val) return false;
+        return isMirror(a.left, b.right) && isMirror(a.right, b.left);
+    }
+}
+```
+
+**Iterative (queue of pairs)**
+
+```java
+class SolutionSymmetricIter {
+    public boolean isSymmetric(TreeNode root) {
+        if (root == null) return true;
+        java.util.ArrayDeque<TreeNode> q = new java.util.ArrayDeque<>();
+        q.add(root.left); q.add(root.right);
+        while (!q.isEmpty()) {
+            TreeNode a = q.removeFirst(), b = q.removeFirst();
+            if (a == null && b == null) continue;
+            if (a == null || b == null || a.val != b.val) return false;
+            q.addLast(a.left);  q.addLast(b.right);
+            q.addLast(a.right); q.addLast(b.left);
+        }
+        return true;
+    }
+}
+```
+
+**Notes**
+
+*   Time `O(n)`, space `O(h)` (DFS) or `O(w)` (BFS).
+*   **Common bug**: comparing `left.left` with `right.left` instead of cross.
+
+***
+
+### 2.5) **Same Tree** (structural & value equality)
+
+**Invariant.** Two trees are the same iff **both structure and values** match at every corresponding node.
+
+**Idea**  
+Traverse both trees **in lockstep**; compare nullness and values; recurse on `(left, left)` and `(right, right)`.
+
+### **2.5) Same Tree (structural & value equality)**
+
+**Invariant.** Two binary trees `p` and `q` are the *same* iff for every corresponding position:
+
+*   both nodes are `null` **or** both are non‑`null` with equal `val`, **and**
+*   their left subtrees are the same **and** their right subtrees are the same.
+
+**Idea**  
+Traverse both trees **in lockstep**. At each step, short‑circuit on any mismatch (nullness or value). Either use a tiny **recursive** check, or an **iterative** BFS that enqueues node **pairs**.
+
+**Implementation (recursive, 4 lines of logic)**
+
+```java
+// class TreeNode { int val; TreeNode left, right; TreeNode(int x){ val = x; } }
+
+class SolutionSameTree {
+    public boolean isSameTree(TreeNode p, TreeNode q) {
+        if (p == null || q == null) return p == q;       // both null -> true; one null -> false
+        if (p.val != q.val) return false;                // value mismatch
+        return isSameTree(p.left, q.left) && isSameTree(p.right, q.right);
+    }
+}
+```
+
+**Implementation (iterative, queue of pairs)**
+
+```java
+class SolutionSameTreeIter {
+    public boolean isSameTree(TreeNode p, TreeNode q) {
+        java.util.ArrayDeque<TreeNode> dq = new java.util.ArrayDeque<>();
+        dq.add(p); dq.add(q);
+        while (!dq.isEmpty()) {
+            TreeNode a = dq.removeFirst(), b = dq.removeFirst();
+            if (a == null || b == null) {
+                if (a != b) return false;        // exactly one is null
+                continue;                         // both null -> skip
+            }
+            if (a.val != b.val) return false;
+            dq.addLast(a.left);  dq.addLast(b.left);
+            dq.addLast(a.right); dq.addLast(b.right);
+        }
+        return true;
+    }
+}
+```
+
+#### Micro‑recall (one‑liners)
+
+*   **Max Depth**: `1 + max(L, R)` (post‑order).
+*   **Min Depth**: first leaf via BFS, or DFS with **single‑child rule**.
+*   **Balanced**: post‑order height with **-1 sentinel**.
+*   **Symmetric**: `isMirror(left, right)` with **cross** children.
+*   **Same Tree**: lockstep equality (structure + value).
+
+## 8) Pattern Recognition Cheat Sheet 
 
 **By query type**
 
