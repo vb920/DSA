@@ -513,6 +513,39 @@ public class LCA {
 }
 ```
 
+### B) Add a **Binary‑Tree‑only LCA** shortcut
+
+For classic LeetCode “LCA of BT,” include the standard recursive solution that doesn’t require preprocessing (works when parent pointers/indices aren’t given):
+
+```java
+// Returns LCA in a binary tree (not BST), O(n)
+private TreeNode lcaBT(TreeNode root, TreeNode p, TreeNode q) {
+    if (root == null || root == p || root == q) return root;
+    TreeNode L = lcaBT(root.left, p, q);
+    TreeNode R = lcaBT(root.right, p, q);
+    if (L != null && R != null) return root;
+    return L != null ? L : R;
+}
+```
+
+This pairs nicely with your lifting‑based LCA for indexed trees. 
+### C) Add a **BST‑specific LCA** one‑liner
+
+Since you have a BST focus elsewhere, include:
+
+```java
+// LCA in BST exploiting ordering, O(h)
+private TreeNode lcaBST(TreeNode root, TreeNode p, TreeNode q) {
+    int lo = Math.min(p.val, q.val), hi = Math.max(p.val, q.val);
+    while (root != null) {
+        if (root.val > hi) root = root.left;
+        else if (root.val < lo) root = root.right;
+        else return root;
+    }
+    return null;
+}
+```
+
 ***
 
 ## 4) Rerooting DP
@@ -853,4 +886,3 @@ public class PathThroughNode {
 *   **Indexing**: All examples assume nodes are `0..n-1`, adjacency list `List<Integer>[] adj`.
 *   **Weighted paths**: For max/min along a path with lifting, store an extra table `agg[k][v]` built alongside `up[k][v]`.
 
-***
