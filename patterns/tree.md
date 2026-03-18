@@ -42,31 +42,62 @@ Tree:       1
 Pre-order:  1, 2, 4, 5, 3  (enter order — top down)
 Post-order: 4, 5, 2, 3, 1  (leave order — bottom up)
 ```
-### DFS (pre/post order)
+1.  **Generic graph / tree via edges** (so you can paste into any graph/tree problem that gives `n` and `edges`)
+2.  **Binary‑tree traversals** (so you can paste into standard `TreeNode` problems)
+***
+
+## ✅ Option A — Graph / (Undirected) Tree Traversal Templates
 
 ```java
 import java.util.*;
 
-public class Traversals {
+class Solution {
 
-    // Collect pre-order and post-order for narration/verification
-    static void dfs(int node, int parent, List<Integer>[] adj,
-                    List<Integer> preorder, List<Integer> postorder) {
-        preorder.add(node);                 // PRE-ORDER work
-        for (int nb : adj[node]) {
-            if (nb == parent) continue;
-            dfs(nb, node, adj, preorder, postorder);
+    /* -------------------- Adjacency Builder -------------------- */
+    // LeetCode often gives you: int n, int[][] edges
+    // This builds an undirected adjacency list.
+    private List<Integer>[] buildAdj(int n, int[][] edges) {
+        List<Integer>[] adj = new ArrayList[n];
+        for (int i = 0; i < n; i++) adj[i] = new ArrayList<>();
+        for (int[] e : edges) {
+            int u = e[0], v = e[1];
+            adj[u].add(v);
+            adj[v].add(u);
         }
-        postorder.add(node);                // POST-ORDER work
+        return adj;
     }
 
-    static int[] bfs(int root, List<Integer>[] adj) {
-        int n = adj.length;
+    /* -------------------- Recursive DFS (pre + post) -------------------- */
+    // Returns both preorder and postorder (useful for narration/verification).
+    private void dfsRec(int u, int p, List<Integer>[] adj,
+                        List<Integer> preorder, List<Integer> postorder) {
+        preorder.add(u);                         // PRE-ORDER work
+        for (int v : adj[u]) {
+            if (v == p) continue;
+            dfsRec(v, u, adj, preorder, postorder);
+        }
+        postorder.add(u);                        // POST-ORDER work
+    }
+
+    // Example callable: returns preorder of a connected tree/graph from root
+    public List<Integer> dfsPreorder(int n, int[][] edges, int root) {
+        List<Integer>[] adj = buildAdj(n, edges);
+        List<Integer> pre = new ArrayList<>();
+        List<Integer> post = new ArrayList<>(); // if you also need post
+        dfsRec(root, -1, adj, pre, post);
+        return pre;
+    }
+
+    /* -------------------- BFS (single-source distances) -------------------- */
+    // Returns dist[] with -1 for unreachable nodes (typical LeetCode BFS pattern).
+    public int[] bfsDistances(int n, int[][] edges, int root) {
+        List<Integer>[] adj = buildAdj(n, edges);
         int[] dist = new int[n];
         Arrays.fill(dist, -1);
         ArrayDeque<Integer> q = new ArrayDeque<>();
         dist[root] = 0;
         q.add(root);
+
         while (!q.isEmpty()) {
             int u = q.removeFirst();
             for (int v : adj[u]) {
@@ -79,25 +110,28 @@ public class Traversals {
         return dist;
     }
 
-    // Iterative DFS that yields both pre and post via a visited flag
-    static List<Integer> dfsIterativePre(List<Integer>[] adj, int root) {
-        int n = adj.length;
-        int[] parent = new int[n];
-        Arrays.fill(parent, -1);
+    /* -------------------- Iterative DFS (pre, optional post) -------------------- */
+    // Preorder using a manual stack with a visited-flag frame.
+    // If you also want postorder, collect it where indicated.
+    public List<Integer> dfsIterativePre(int n, int[][] edges, int root) {
+        List<Integer>[] adj = buildAdj(n, edges);
         List<Integer> pre = new ArrayList<>();
+        // List<Integer> post = new ArrayList<>(); // uncomment if needed
+
+        // frame: (node, parent, visitedFlag)
         ArrayDeque<int[]> st = new ArrayDeque<>();
-        // state: [node, parent, visitedFlag(0/1)]
         st.push(new int[]{root, -1, 0});
+
         while (!st.isEmpty()) {
-            int[] s = st.pop();
-            int u = s[0], p = s[1], visited = s[2];
+            int[] f = st.pop();
+            int u = f[0], p = f[1], visited = f[2];
             if (visited == 1) {
-                // post-order work spot if needed
+                // post.add(u); // collect postorder here if desired
                 continue;
             }
-            parent[u] = p;
             pre.add(u);
-            st.push(new int[]{u, p, 1}); // for post-order later
+            st.push(new int[]{u, p, 1});  // schedule post-visit
+            // Push neighbors (any order is fine; reverse for a specific order)
             for (int v : adj[u]) {
                 if (v != p) st.push(new int[]{v, u, 0});
             }
@@ -106,6 +140,151 @@ public class Traversals {
     }
 }
 ```
+
+### What changed vs your original
+
+*   Added **`buildAdj`** so you can drop this into problems that give `n` and `edges`.
+*   Kept your **pre/post placement** exactly, but exposed as re‑usable methods.
+*   Removed global/static state and wrapped inside **`class Solution`**, which LeetCode expects.
+*   Kept `ArrayDeque` and `-1` distance convention (LeetCode‑friendly).
+
+***
+
+## ✅ Option B — Binary Tree Traversal Templates (for `TreeNode`)
+
+Use these when LeetCode provides the `TreeNode` definition.  
+(**Do not** redefine `TreeNode`—LeetCode includes it.)
+
+```java
+import java.util.*;
+
+class Solution {
+
+    /* -------------------- Preorder (recursive) -------------------- */
+    public List<Integer> preorderTraversal(TreeNode root) {
+        List<Integer> res = new ArrayList<>();
+        preorder(root, res);
+        return res;
+    }
+    private void preorder(TreeNode node, List<Integer> res) {
+        if (node == null) return;
+        res.add(node.val);
+        preorder(node.left, res);
+        preorder(node.right, res);
+    }
+
+    /* -------------------- Inorder (recursive) -------------------- */
+    public List<Integer> inorderTraversal(TreeNode root) {
+        List<Integer> res = new ArrayList<>();
+        inorder(root, res);
+        return res;
+    }
+    private void inorder(TreeNode node, List<Integer> res) {
+        if (node == null) return;
+        inorder(node.left, res);
+        res.add(node.val);
+        inorder(node.right, res);
+    }
+
+    /* -------------------- Postorder (recursive) -------------------- */
+    public List<Integer> postorderTraversal(TreeNode root) {
+        List<Integer> res = new ArrayList<>();
+        postorder(root, res);
+        return res;
+    }
+    private void postorder(TreeNode node, List<Integer> res) {
+        if (node == null) return;
+        postorder(node.left, res);
+        postorder(node.right, res);
+        res.add(node.val);
+    }
+
+    /* -------------------- Level Order (BFS) -------------------- */
+    public List<List<Integer>> levelOrder(TreeNode root) {
+        List<List<Integer>> res = new ArrayList<>();
+        if (root == null) return res;
+        ArrayDeque<TreeNode> q = new ArrayDeque<>();
+        q.add(root);
+        while (!q.isEmpty()) {
+            int sz = q.size();
+            List<Integer> level = new ArrayList<>(sz);
+            for (int i = 0; i < sz; i++) {
+                TreeNode cur = q.removeFirst();
+                level.add(cur.val);
+                if (cur.left != null) q.addLast(cur.left);
+                if (cur.right != null) q.addLast(cur.right);
+            }
+            res.add(level);
+        }
+        return res;
+    }
+
+    /* -------------------- Preorder (iterative) -------------------- */
+    public List<Integer> preorderTraversalIterative(TreeNode root) {
+        List<Integer> res = new ArrayList<>();
+        if (root == null) return res;
+        ArrayDeque<TreeNode> st = new ArrayDeque<>();
+        st.push(root);
+        while (!st.isEmpty()) {
+            TreeNode node = st.pop();
+            res.add(node.val);
+            // push right first so left is processed first
+            if (node.right != null) st.push(node.right);
+            if (node.left != null) st.push(node.left);
+        }
+        return res;
+    }
+
+    /* -------------------- Inorder (iterative) -------------------- */
+    public List<Integer> inorderTraversalIterative(TreeNode root) {
+        List<Integer> res = new ArrayList<>();
+        ArrayDeque<TreeNode> st = new ArrayDeque<>();
+        TreeNode cur = root;
+        while (cur != null || !st.isEmpty()) {
+            while (cur != null) {
+                st.push(cur);
+                cur = cur.left;
+            }
+            cur = st.pop();
+            res.add(cur.val);
+            cur = cur.right;
+        }
+        return res;
+    }
+
+    /* -------------------- Postorder (iterative, one stack) -------------------- */
+    public List<Integer> postorderTraversalIterative(TreeNode root) {
+        List<Integer> res = new ArrayList<>();
+        ArrayDeque<TreeNode> st = new ArrayDeque<>();
+        TreeNode cur = root, last = null;
+        while (cur != null || !st.isEmpty()) {
+            if (cur != null) {
+                st.push(cur);
+                cur = cur.left;
+            } else {
+                TreeNode peek = st.peek();
+                if (peek.right != null && last != peek.right) {
+                    cur = peek.right; // go right subtree
+                } else {
+                    res.add(peek.val); // visit
+                    last = st.pop();
+                }
+            }
+        }
+        return res;
+    }
+}
+```
+
+> **Tip:** For problems like *Right Side View*, *Zigzag Level Order*, *Check Completeness*, you can reuse the `levelOrder` BFS skeleton and just change what you collect per level.
+
+***
+
+## Quick sanity notes
+
+*   **Graph flavor**: stick to `int n, int[][] edges` + `buildAdj`.
+*   **TreeNode flavor**: keep everything in `class Solution` and **don’t** redeclare `TreeNode`.
+*   Your original DFS/BFS logic was sound—this refactor mainly wraps it into **function signatures** LeetCode expects and removes static/global state.
 
 ### When to Use Which
 
