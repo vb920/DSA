@@ -1030,6 +1030,7 @@ dp[k][v] = min(dp[k-1][u] + weight(u, v)) for all edges
 
 ### Decision Flowchart
 
+```
 What is the problem about?
     |
     +-- Finding shortest distances?
@@ -1062,3 +1063,4 @@ What is the problem about?
             |
             +-- Has cycles? --> Condense SCCs to DAG, then DP
             +-- DAG? --> DP in topological order
+``
