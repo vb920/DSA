@@ -1063,56 +1063,44 @@ public class SubarraySumRange {
 If the array can have negative values, prefix sums aren't sorted. Use a **balanced BST** (like `SortedList` from `sortedcontainers`) or a **BIT/Fenwick tree** with coordinate compression.
 
 ```java
-import java.util.Arrays;
+import java.util.*;
 
 public class SubarraySumRange {
 
     public static long countSubarraysSumInRange(int[] a, long lo, long hi) {
-        int n = a.length;
-        long[] pre = new long[n + 1];
+        TreeMap<Long, Integer> map = new TreeMap<>();
+        
+        // prefix sum = 0 occurs once
+        map.put(0L, 1);
 
-        // Build prefix sum
-        for (int i = 0; i < n; i++) {
-            pre[i + 1] = pre[i] + a[i];
-        }
-
+        long currentSum = 0;
         long count = 0;
 
-        for (int j = 1; j <= n; j++) {
-            long lowBound = pre[j] - hi;
-            long highBound = pre[j] - lo;
+        for (int x : a) {
+            currentSum += x;
 
-            // bisect_left(pre, lowBound, 0, j)
-            int left = lowerBound(pre, 0, j, lowBound);
+            long left = currentSum - hi;
+            long right = currentSum - lo;
 
-            // bisect_right(pre, highBound, 0, j)
-            int right = upperBound(pre, 0, j, highBound);
+            // Get all prefix sums in range [left, right]
+            NavigableMap<Long, Integer> sub = map.subMap(left, true, right, true);
 
-            count += (right - left);
+            for (int freq : sub.values()) {
+                count += freq;
+            }
+
+            // Insert current prefix sum
+            map.put(currentSum, map.getOrDefault(currentSum, 0) + 1);
         }
 
         return count;
     }
 
-    // Equivalent to bisect_left
-    private static int lowerBound(long[] arr, int from, int to, long target) {
-        int pos = Arrays.binarySearch(arr, from, to, target);
-        if (pos < 0) pos = -pos - 1;
-        return pos;
-    }
+    public static void main(String[] args) {
+        int[] a = {2, -1, 3};
+        long lo = 2, hi = 4;
 
-    // Equivalent to bisect_right
-    private static int upperBound(long[] arr, int from, int to, long target) {
-        int pos = Arrays.binarySearch(arr, from, to, target);
-        if (pos < 0) {
-            pos = -pos - 1;
-        } else {
-            // Move to the right past duplicates
-            while (pos < to && arr[pos] == target) {
-                pos++;
-            }
-        }
-        return pos;
+        System.out.println(countSubarraysSumInRange(a, lo, hi));
     }
 }
 ```
