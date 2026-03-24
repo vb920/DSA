@@ -15,7 +15,6 @@
 - Longest Substring Without Repeating Characters
 - LRU Cache
 - Minimum Window Substring
-- Number of Submatrices That Sum to Target
 - Number of Wonderful Substrings
 - Subarray Sum Equals K
 - Subarray Sums Divisible by K
@@ -96,6 +95,7 @@
 - Product of the Last K Numbers
 - Range Sum Query - Immutable
 - Range Sum Query 2D - Immutable
+- Number of Submatrices That Sum to Target
 - Removing Minimum Number of Magic Beans
 - Sum of Absolute Differences in a Sorted Array
 
