@@ -1,6 +1,124 @@
 
 ---
 
+## Hashing
+- 4Sum II
+- Alphabet Board Path
+- Bulls and Cows
+- Count Number of Beautiful Subarrays
+- Design HashMap
+- Grid Illumination
+- Group Anagrams
+- Insert Delete GetRandom O(1)
+- Isomorphic Strings
+- Longest Consecutive Sequence
+- Longest Substring Without Repeating Characters
+- LRU Cache
+- Minimum Window Substring
+- Number of Submatrices That Sum to Target
+- Number of Wonderful Substrings
+- Subarray Sum Equals K
+- Subarray Sums Divisible by K
+- Top K Frequent Elements
+- Tuple with Same Product
+- Two Sum
+- Word Subsets
+
+
+## Two Pointers
+- Valid Palindrome
+- Valid Palindrome II
+- Remove Duplicates from Sorted Array
+- Remove Element
+- Merge Sorted Array
+- Container With Most Water
+- 3Sum
+- 3Sum Closest
+- Sort Colors (Dutch National Flag)
+- Rotate Array
+- Reverse Words in a String / Reverse Words in a String III
+- String Compression
+- 4Sum
+- Partition Array According to Given Pivot
+- Reverse Vowels of a String
+- Next Permutation
+- Next Greater Element III
+- Lexicographically Smallest Palindrome
+- DI String Match
+- Minimum Length of String After Deleting Similar Ends
+- Separate Black and White Balls
+- Sort Array by Parity
+- Shortest Distance to a Character
+
+## Sliding Window
+- Check If a String Contains All Binary Codes of Size K
+- Count Number of Nice Subarrays
+- Count the Number of Good Subarrays
+- Find All Anagrams in a String
+- Frequency of the Most Frequent Element
+- Fruit Into Baskets
+- K Radius Subarray Averages
+- Longest Continuous Subarray With Absolute Diff Less Than or Equal to Limit
+- Longest Repeating Character Replacement
+- Longest Substring Without Repeating Characters
+- Max Consecutive Ones III
+- Max Value of Equation
+- Maximum Average Subarray I
+- Maximum Erasure Value
+- Maximum Number of Vowels in a Substring of Given Length
+- Maximum Points You Can Obtain from Cards
+- Maximum Sum of 3 Non-Overlapping Subarrays
+- Minimum Consecutive Cards to Pick Up
+- Minimum Operations to Reduce X to Zero
+- Minimum Size Subarray Sum
+- Minimum Window Substring
+- Moving Stones Until Consecutive II
+- Number of Sub-arrays of Size K and Average Greater than or Equal to Threshold
+- Number of Subarrays with Bounded Maximum
+- Permutation in String
+- Sliding Window Maximum
+- Sliding Window Median
+- Subarray Product Less Than K
+- Subarrays with K Different Integers
+- Substring with Concatenation of All Words
+
+## Prefix Sum - 15
+- Count Vowel Strings in Ranges
+- Find All Good Indices
+- Find Good Days to Rob the Bank
+- Increment Submatrices by One
+- Left and Right Sum Differences
+- Minimum Cost to Make Array Equal
+- Minimum Penalty for a Shop
+- Movement of Robots
+- Power of Heroes
+- Product of Array Except Self
+- Product of the Last K Numbers
+- Range Sum Query - Immutable
+- Range Sum Query 2D - Immutable
+- Removing Minimum Number of Magic Beans
+- Sum of Absolute Differences in a Sorted Array
+
+## Linked List
+- Add Two Numbers
+- Convert Binary Number in a Linked List to Integer
+- Copy List with Random Pointer
+- Delete the Middle Node of a Linked List
+- Intersection of Two Linked Lists
+- Linked List Cycle
+- Linked List Cycle II
+- Linked List Random Node
+- Merge k Sorted Lists
+- Merge Two Sorted Lists
+- Middle of the Linked List
+- Odd Even Linked List
+- Palindrome Linked List
+- Remove Duplicates from Sorted List
+- Remove Nth Node From End of List
+- Reverse Linked List
+- Reverse Nodes in k-Group
+- Sort List
+
 ## Binary Search
 - Binary Search
 - Capacity to Ship Packages Within D Days
@@ -90,33 +208,23 @@
 - Top K Frequent Elements
 - Trapping Rain Water II
 
-## Bitwise
-- Bitwise AND of Numbers Range
-- Can I Win
-- Counting Bits
-- Longest Nice Subarray
-- Maximum XOR of Two Numbers in an Array
-- Missing Number
-- Number of 1 Bits
-- Partition to K Equal Sum Subsets
-- Power of Two
-- Shortest Path Visiting All Nodes
-- Shortest Subarray with OR at Least K
-- Single Number
-- Single Number II
-- Single Number III
-- Smallest Sufficient Team
-- Sum of Two Integers
 
-## Trie
-- Design Add And Search Words Data Structure
-- Design In-Memory File System
-- Design Search Autocomplete System
-- Implement Trie (Prefix Tree)
-- Replace Words
-- Search Suggestions System
-- Stream of Characters
-- Word Search II
+## Queue - 16
+- Continuous Subarrays
+- Design Circular Deque
+- Design Circular Queue
+- Design Front Middle Back Queue
+- Dota2 Senate
+- Find the Winner of the Circular Game
+- Implement Queue using Stacks
+- Implement Stack using Queues
+- Jump Game VI
+- Max Value of Equation
+- Minimum Number of K Consecutive Bit Flips
+- Reveal Cards in Increasing Order
+- Shortest Subarray with Sum at Least K
+- Sliding Window Maximum
+- Stamping the Sequence
 
 ## Recursion & Backtracking
 - Combination Sum
@@ -179,6 +287,18 @@
 - Sum Root to Leaf Numbers
 - Symmetric Tree
 - Validate Binary Search Tree
+
+## Tree Algorithms - 15
+- Company Queries I
+- Company Queries II
+- Distance Queries
+- Path Queries
+- Subordinates
+- Subtree Queries
+- Tree Diameter
+- Tree Distances I
+- Tree Distances II
+
 
 ## Graph
 - 01 Matrix
@@ -340,29 +460,6 @@
 - Word Break
 - Word Break II
 
-## Hashing
-- 4Sum II
-- Alphabet Board Path
-- Bulls and Cows
-- Count Number of Beautiful Subarrays
-- Design HashMap
-- Grid Illumination
-- Group Anagrams
-- Insert Delete GetRandom O(1)
-- Isomorphic Strings
-- Longest Consecutive Sequence
-- Longest Substring Without Repeating Characters
-- LRU Cache
-- Minimum Window Substring
-- Number of Submatrices That Sum to Target
-- Number of Wonderful Substrings
-- Subarray Sum Equals K
-- Subarray Sums Divisible by K
-- Top K Frequent Elements
-- Tuple with Same Product
-- Two Sum
-- Word Subsets
-
 ## Design
 - All O(1) Data Structure
 - BST Iterator
@@ -466,143 +563,48 @@
 - Remove Interval
 - The Number of the Smallest Unoccupied Chair
 
-## Tree Algorithms - 15
-- Company Queries I
-- Company Queries II
-- Distance Queries
-- Path Queries
-- Subordinates
-- Subtree Queries
-- Tree Diameter
-- Tree Distances I
-- Tree Distances II
+## Bitwise
+- Bitwise AND of Numbers Range
+- Can I Win
+- Counting Bits
+- Longest Nice Subarray
+- Maximum XOR of Two Numbers in an Array
+- Missing Number
+- Number of 1 Bits
+- Partition to K Equal Sum Subsets
+- Power of Two
+- Shortest Path Visiting All Nodes
+- Shortest Subarray with OR at Least K
+- Single Number
+- Single Number II
+- Single Number III
+- Smallest Sufficient Team
+- Sum of Two Integers
 
-## Prefix Sum - 15
-- Count Vowel Strings in Ranges
-- Find All Good Indices
-- Find Good Days to Rob the Bank
-- Increment Submatrices by One
-- Left and Right Sum Differences
-- Minimum Cost to Make Array Equal
-- Minimum Penalty for a Shop
-- Movement of Robots
-- Power of Heroes
-- Product of Array Except Self
-- Product of the Last K Numbers
-- Range Sum Query - Immutable
-- Range Sum Query 2D - Immutable
-- Removing Minimum Number of Magic Beans
-- Sum of Absolute Differences in a Sorted Array
-
-## Sliding Window
-- Check If a String Contains All Binary Codes of Size K
-- Count Number of Nice Subarrays
-- Count the Number of Good Subarrays
-- Find All Anagrams in a String
-- Frequency of the Most Frequent Element
-- Fruit Into Baskets
-- K Radius Subarray Averages
-- Longest Continuous Subarray With Absolute Diff Less Than or Equal to Limit
-- Longest Repeating Character Replacement
-- Longest Substring Without Repeating Characters
-- Max Consecutive Ones III
-- Max Value of Equation
-- Maximum Average Subarray I
-- Maximum Erasure Value
-- Maximum Number of Vowels in a Substring of Given Length
-- Maximum Points You Can Obtain from Cards
-- Maximum Sum of 3 Non-Overlapping Subarrays
-- Minimum Consecutive Cards to Pick Up
-- Minimum Operations to Reduce X to Zero
-- Minimum Size Subarray Sum
-- Minimum Window Substring
-- Moving Stones Until Consecutive II
-- Number of Sub-arrays of Size K and Average Greater than or Equal to Threshold
-- Number of Subarrays with Bounded Maximum
-- Permutation in String
-- Sliding Window Maximum
-- Sliding Window Median
-- Subarray Product Less Than K
-- Subarrays with K Different Integers
-- Substring with Concatenation of All Words
-
-## Linked List
-- Add Two Numbers
-- Convert Binary Number in a Linked List to Integer
-- Copy List with Random Pointer
-- Delete the Middle Node of a Linked List
-- Intersection of Two Linked Lists
-- Linked List Cycle
-- Linked List Cycle II
-- Linked List Random Node
-- Merge k Sorted Lists
-- Merge Two Sorted Lists
-- Middle of the Linked List
-- Odd Even Linked List
-- Palindrome Linked List
-- Remove Duplicates from Sorted List
-- Remove Nth Node From End of List
-- Reverse Linked List
-- Reverse Nodes in k-Group
-- Sort List
-
-## Queue - 16
-- Continuous Subarrays
-- Design Circular Deque
-- Design Circular Queue
-- Design Front Middle Back Queue
-- Dota2 Senate
-- Find the Winner of the Circular Game
-- Implement Queue using Stacks
-- Implement Stack using Queues
-- Jump Game VI
-- Max Value of Equation
-- Minimum Number of K Consecutive Bit Flips
-- Reveal Cards in Increasing Order
-- Shortest Subarray with Sum at Least K
-- Sliding Window Maximum
-- Stamping the Sequence
-
-
-## Two Pointers
-- Valid Palindrome
-- Valid Palindrome II
-- Remove Duplicates from Sorted Array
-- Remove Element
-- Merge Sorted Array
-- Container With Most Water
-- 3Sum
-- 3Sum Closest
-- Sort Colors (Dutch National Flag)
-- Rotate Array
-- Reverse Words in a String / Reverse Words in a String III
-- String Compression
-- 4Sum
-- Partition Array According to Given Pivot
-- Reverse Vowels of a String
-- Next Permutation
-- Next Greater Element III
-- Lexicographically Smallest Palindrome
-- DI String Match
-- Minimum Length of String After Deleting Similar Ends
-- Separate Black and White Balls
-- Sort Array by Parity
-- Shortest Distance to a Character
+## Trie
+- Design Add And Search Words Data Structure
+- Design In-Memory File System
+- Design Search Autocomplete System
+- Implement Trie (Prefix Tree)
+- Replace Words
+- Search Suggestions System
+- Stream of Characters
+- Word Search II
 
 ## Range Queries
-- 307. Range Sum Query – Mutable
-- 315. Count of Smaller Numbers After Self
-- 493. Reverse Pairs
-- 327. Count of Range Sum
-- 1649. Create Sorted Array through Instructions
-- 2407. Longest Increasing Subsequence II
-- 699. Falling Squares
-- 732. My Calendar III
-- 715. Range Module
-- 218. The Skyline Problem
-- 850. Rectangle Area II
-- 2569. Handling Sum Queries After Update
-- 2080. Range Frequency Queries
-- 2426. Number of Pairs Satisfying Inequality
-- 2250. Count Number of Rectangles Containing Each Point
+-  Range Sum Query – Mutable
+-  Count of Smaller Numbers After Self
+-  Reverse Pairs
+-  Count of Range Sum
+-  Create Sorted Array through Instructions
+-  Longest Increasing Subsequence II
+-  Falling Squares
+-  My Calendar III
+-  Range Module
+-  The Skyline Problem
+-  Rectangle Area II
+-  Handling Sum Queries After Update
+-  Range Frequency Queries
+-  Number of Pairs Satisfying Inequality
+-  Count Number of Rectangles Containing Each Point
 ---
