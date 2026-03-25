@@ -12,9 +12,6 @@
 - Insert Delete GetRandom O(1)
 - Isomorphic Strings
 - Longest Consecutive Sequence
-- Longest Substring Without Repeating Characters
-- LRU Cache
-- Minimum Window Substring
 - Number of Wonderful Substrings
 - Subarray Sum Equals K
 - Subarray Sums Divisible by K
