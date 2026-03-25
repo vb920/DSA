@@ -295,3 +295,279 @@ I can turn this into a **clean Markdown or PDF** with:
 *   Optional **C++/Java/Python** templates for BIT & Segment Trees (iterative + recursive, with lazy).
 
 **Tell me your language preference (C++/Java/Python)** and I’ll include idiomatic templates and complexity comments.
+
+
+
+
+
+**** 
+
+### Tree
+🗺️ B. 6‑Week Roadmap (from Scratch → SDE‑2)
+Each week has Must‑Dos (core) + More Practice from your list.
+Week 1 — Traversals, Depths, Views (Basics)
+Why: Build fluent DFS/BFS + stacks/queues; unlock 70% of easy/medium.
+
+
+Must‑Do
+
+94. Binary Tree Inorder Traversal (iterative + Morris)
+
+
+Preorder, 145. Postorder (iterative stacks)
+
+
+
+
+Level Order, 107. Level Order II, 199. Right Side View, 513. Bottom Left Value
+
+
+
+
+Maximum Depth, 110. Balanced Binary Tree, 111. Minimum Depth
+
+
+
+
+Symmetric Tree, 100. Same Tree, 226. Invert Binary Tree
+
+
+
+
+Merge Two Binary Trees, 655. Print Binary Tree
+
+
+
+
+
+More Practice
+
+589/590/559 (N‑ary traversals + depth)
+
+
+Reverse Odd Levels, 637. Average of Levels, 515. Largest Value Each Row
+
+
+
+
+
+Invariants to practice: stack discipline, level loop size, mirror checks.
+
+Week 2 — BST Fundamentals & Operations
+Why: BST properties are frequent in SDE‑2 interviews.
+
+
+Must‑Do
+
+98. Validate BST (carry range); 230. Kth Smallest; 538/1038. Greater Sum Tree
+
+
+LCA in BST (use order); 701. Insert; 450. Delete; 700. Search
+
+
+
+
+BST from Preorder; 108. Sorted Array → BST; 109. Sorted List → BST
+
+
+173/1586. BST Iterators I/II; 285/510. Inorder Successor (with/without parent)
+530/783. Min Abs Difference in BST; 653. Two Sum BSTs; 938. Range Sum of BST
+
+
+
+More Practice
+
+95/96. Unique BSTs I/II; 669. Trim BST; 897. Increasing Order Search Tree
+
+
+Serialize/Deserialize BST (exploit BST invariants)
+
+
+
+
+
+Invariants: inorder sortedness; subtree range constraints; successor = leftmost of right or first greater ancestor.
+
+Week 3 — Build/Recover/Serialize Trees
+Why: Construction sharpens recursive thinking and index math.
+
+
+Must‑Do
+
+105/106/889. Build from traversals; 1028. Recover from preorder with depth
+
+
+Serialize & Deserialize Binary Tree (DFS & BFS variants)
+
+
+
+
+Serialize & Deserialize BST (compact preorder)
+
+
+
+
+Flatten to Linked List (preorder threading)
+
+
+
+
+Construct String from Binary Tree; 536. Construct Tree from String
+
+
+
+
+
+More Practice
+
+222. Count Complete Tree Nodes (binary height trick)
+
+
+Check Completeness; 919. CBT Inserter
+
+
+
+
+
+Invariants: split by root index (hash map for inorder indexes); null markers for serialize; height checks for complete tree.
+
+Week 4 — Paths, Sums, DP on Trees (Medium→Hard)
+Why: Postorder DP + path passing = core SDE‑2 thinking.
+
+
+Must‑Do
+
+112/113/437. Path Sum I/II/III (prefix sum HashMap)
+
+
+Sum Root to Leaf Numbers; 1022. Sum of Root-To-Leaf Binary Numbers
+
+
+
+
+Binary Tree Maximum Path Sum (global best via postorder gain)
+
+
+
+
+Diameter of Binary Tree; 687. Longest Univalue Path
+
+
+865/1123. Smallest Subtree with all Deepest Nodes / LCA of Deepest
+
+
+Pseudo-Palindromic Paths (bitmask of 10 digits)
+
+
+
+
+
+More Practice
+
+979. Distribute Coins; 1339. Max Product of Splitted Tree
+
+
+Most Frequent Subtree Sum; 666. Path Sum IV (encoded tree)
+
+
+298/549. Longest Consecutive Sequence I/II
+
+
+
+Invariants: return “one-side best” while updating “through-root best”; prefix map (+ backtrack); bitmask odd-count parity.
+
+Week 5 — Graphy Trees, LCA Variants, Vertical/Views
+Why: Tree ↔ Graph conversion, parent pointers, extra metadata.
+
+
+Must‑Do
+
+236. LCA (general); 1644/1650/1676. LCA II/III/IV (missing nodes / with parent / multiple nodes)
+
+
+Directions from one node to another (find LCA + up/down path)
+
+
+987/314. Vertical Order Traversal (column/row ordering)
+
+
+Distance K (build undirected graph around root)
+
+
+
+
+Binary Tree Paths; 572. Subtree of Another Tree; 652. Find Duplicate Subtrees
+
+
+
+
+
+More Practice
+
+742. Closest Leaf; 545. Boundary of Binary Tree
+
+
+Second Minimum Node; 872. Leaf-Similar Trees
+
+
+271–272 (closest value I/II), 2476 (closest nodes queries in BST)
+
+
+
+Invariants: node→parent mapping; BFS by distance; tie-breaking by (col,row,val) sorts; subtree signature.
+
+Week 6 — Advanced: Rerooting, Tree DP, Hard Problems
+Why: This is the SDE‑2/3 separator: rerooting, centroid ideas, counting.
+
+
+Must‑Do
+
+834. Sum of Distances in Tree (rerooting: dpDown + dpAll)
+
+
+Tree Diameter (unrooted via 2 BFS/DFS or DP)
+
+
+
+
+Number of Nodes in Subtree with Same Label (postorder counts)
+
+
+
+
+Longest Path With Different Adjacent Characters (DP on chars)
+
+
+
+
+Amount of Time to Infect (graph BFS from target)
+
+
+
+
+Height After Subtree Removal Queries (precompute L/R heights + prefix/suffix)
+
+
+
+
+Extract Kth Character From The Rope Tree (index descent)
+
+
+
+
+
+More Practice (Pick your battles)
+
+1373. Maximum Sum BST in Binary Tree (return min/max/sum/isBST)
+
+
+Longest ZigZag Path; 1376. Time Needed to Inform Employees
+
+
+
+
+Most Profitable Path; 2421. Number of Good Paths (DSU on values)
+
+
+2322/2581/2867/2925/3068/3241/3331 (advanced reroot/DP/greedy on trees)
+
