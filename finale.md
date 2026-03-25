@@ -45,31 +45,80 @@
 - Shortest Distance to a Character
 
 ## Sliding Window
-- Longest Substring w/o Repeat → Variable‑Size
-- Fruit Into Baskets → Distinct‑Count / Variable‑Size
-- Max Consecutive Ones III → Variable‑Size
-- Longest Repeating Char Replacement → Variable‑Size
-- Minimum Size Subarray Sum → Two‑Pointer Sum
-- Subarray Product < K → Two‑Pointer Product
-- Find All Anagrams → Fixed‑Size / Frequency
-- Sliding Window Maximum → Monotonic Queue
-- Abs Diff ≤ Limit → Monotonic Queue / Global Constraint
-- Frequency of Most Frequent Element → Global Constraint
-- Max Points from Cards → Prefix‑Sum Hybrid / Circular
-- Subarrays with K Different → Distinct‑Count
-- Minimum Window Substring → Frequency
-- Minimum Ops to Reduce X → Prefix‑Sum Hybrid / Two‑Pointer Sum
-- Sliding Window Median → Priority Structures
-- Max Value of Equation → Monotonic Queue
-- Max Sum of 3 Non‑Overlapping → Multiple Windows / Prefix‑Sum Hybrid
-- Count the Number of Good Subarrays → Variable‑Size / Frequency
-- Count Number of Nice Subarrays → Distinct‑Count
-- Substring with Concatenation of All Words → Substring Pattern
-- K Radius Subarray Averages → Substring Pattern / Fixed‑Size
-- Max Number of Vowels (fixed k) → Fixed‑Size
-- Check All Binary Codes of Size K → State‑Encoded
-- Minimum Consecutive Cards to Pick Up → Variable‑Size (duplicate window)
-- Maximum Erasure Value → Distinct‑Count / Variable‑Size
+*   **1. Variable‑Size Window (Core Sliding Window)**
+    *   Longest Substring Without Repeat
+    *   Fruit Into Baskets
+    *   Max Consecutive Ones III
+    *   Longest Repeating Character Replacement
+    *   Minimum Consecutive Cards to Pick Up
+    *   Count the Number of Good Subarrays
+    *   Maximum Erasure Value
+
+
+
+*   **2. Distinct‑Count**
+    *   Fruit Into Baskets
+    *   Subarrays with K Different
+    *   Count Number of Nice Subarrays
+    *   Maximum Erasure Value
+
+
+
+*   **3. Two‑Pointer Sum / Product**
+    *   Minimum Size Subarray Sum
+    *   Subarray Product < K
+    *   Minimum Ops to Reduce X
+
+
+
+*   **4. Fixed‑Size Window**
+    *   Find All Anagrams
+    *   K‑Radius Subarray Averages
+    *   Max Number of Vowels (fixed k)
+    *   Check All Binary Codes of Size K
+
+
+
+*   **5. Frequency‑Based**
+    *   Find All Anagrams
+    *   Minimum Window Substring
+    *   Longest Repeating Character Replacement
+    *   Count the Number of Good Subarrays
+
+
+
+*   **6. Monotonic Queue**
+    *   Sliding Window Maximum
+    *   Abs Diff ≤ Limit
+    *   Max Value of Equation
+
+
+
+*   **7. Global Constraint**
+    *   Abs Diff ≤ Limit
+    *   Frequency of Most Frequent Element
+    *   Longest Repeating Character Replacement
+
+
+
+*   **8. Prefix‑Sum Hybrid**
+    *   Max Points from Cards
+    *   Minimum Ops to Reduce X
+    *   Max Sum of 3 Non‑Overlapping
+
+
+
+*   **9. Substring Pattern**
+    *   Substring with Concatenation of All Words
+    *   K‑Radius Subarray Averages
+    *   Check All Binary Codes of Size K
+
+
+
+*   **10. Priority Structures**
+    *   Sliding Window Median
+
+
 
 ## Prefix Sum - 15
 - Count Vowel Strings in Ranges
