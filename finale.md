@@ -45,36 +45,31 @@
 - Shortest Distance to a Character
 
 ## Sliding Window
-- Check If a String Contains All Binary Codes of Size K
-- Count Number of Nice Subarrays
-- Count the Number of Good Subarrays
-- Find All Anagrams in a String
-- Frequency of the Most Frequent Element
-- Fruit Into Baskets
-- K Radius Subarray Averages
-- Longest Continuous Subarray With Absolute Diff Less Than or Equal to Limit
-- Longest Repeating Character Replacement
-- Longest Substring Without Repeating Characters
-- Max Consecutive Ones III
-- Max Value of Equation
-- Maximum Average Subarray I
-- Maximum Erasure Value
-- Maximum Number of Vowels in a Substring of Given Length
-- Maximum Points You Can Obtain from Cards
-- Maximum Sum of 3 Non-Overlapping Subarrays
-- Minimum Consecutive Cards to Pick Up
-- Minimum Operations to Reduce X to Zero
-- Minimum Size Subarray Sum
-- Minimum Window Substring
-- Moving Stones Until Consecutive II
-- Number of Sub-arrays of Size K and Average Greater than or Equal to Threshold
-- Number of Subarrays with Bounded Maximum
-- Permutation in String
-- Sliding Window Maximum
-- Sliding Window Median
-- Subarray Product Less Than K
-- Subarrays with K Different Integers
-- Substring with Concatenation of All Words
+- Longest Substring w/o Repeat → Variable‑Size
+- Fruit Into Baskets → Distinct‑Count / Variable‑Size
+- Max Consecutive Ones III → Variable‑Size
+- Longest Repeating Char Replacement → Variable‑Size
+- Minimum Size Subarray Sum → Two‑Pointer Sum
+- Subarray Product < K → Two‑Pointer Product
+- Find All Anagrams → Fixed‑Size / Frequency
+- Sliding Window Maximum → Monotonic Queue
+- Abs Diff ≤ Limit → Monotonic Queue / Global Constraint
+- Frequency of Most Frequent Element → Global Constraint
+- Max Points from Cards → Prefix‑Sum Hybrid / Circular
+- Subarrays with K Different → Distinct‑Count
+- Minimum Window Substring → Frequency
+- Minimum Ops to Reduce X → Prefix‑Sum Hybrid / Two‑Pointer Sum
+- Sliding Window Median → Priority Structures
+- Max Value of Equation → Monotonic Queue
+- Max Sum of 3 Non‑Overlapping → Multiple Windows / Prefix‑Sum Hybrid
+- Count the Number of Good Subarrays → Variable‑Size / Frequency
+- Count Number of Nice Subarrays → Distinct‑Count
+- Substring with Concatenation of All Words → Substring Pattern
+- K Radius Subarray Averages → Substring Pattern / Fixed‑Size
+- Max Number of Vowels (fixed k) → Fixed‑Size
+- Check All Binary Codes of Size K → State‑Encoded
+- Minimum Consecutive Cards to Pick Up → Variable‑Size (duplicate window)
+- Maximum Erasure Value → Distinct‑Count / Variable‑Size
 
 ## Prefix Sum - 15
 - Count Vowel Strings in Ranges
