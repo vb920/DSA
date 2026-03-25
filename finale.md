@@ -180,6 +180,24 @@
 - Sum of Subarray Minimums
 - Valid Parentheses
 
+## Queue - 16
+- Continuous Subarrays
+- Design Circular Deque
+- Design Circular Queue
+- Design Front Middle Back Queue
+- Dota2 Senate
+- Find the Winner of the Circular Game
+- Implement Queue using Stacks
+- Implement Stack using Queues
+- Jump Game VI
+- Max Value of Equation
+- Minimum Number of K Consecutive Bit Flips
+- Reveal Cards in Increasing Order
+- Shortest Subarray with Sum at Least K
+- Sliding Window Maximum
+- Stamping the Sequence
+
+
 ## Heap
 - Design Twitter
 - Find K Pairs with Smallest Sums
@@ -202,24 +220,6 @@
 - Task Scheduler
 - Top K Frequent Elements
 - Trapping Rain Water II
-
-
-## Queue - 16
-- Continuous Subarrays
-- Design Circular Deque
-- Design Circular Queue
-- Design Front Middle Back Queue
-- Dota2 Senate
-- Find the Winner of the Circular Game
-- Implement Queue using Stacks
-- Implement Stack using Queues
-- Jump Game VI
-- Max Value of Equation
-- Minimum Number of K Consecutive Bit Flips
-- Reveal Cards in Increasing Order
-- Shortest Subarray with Sum at Least K
-- Sliding Window Maximum
-- Stamping the Sequence
 
 ## Recursion & Backtracking
 - Combination Sum
