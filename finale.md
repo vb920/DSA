@@ -144,7 +144,6 @@
 - Remove Duplicates from Sorted List [1]
 - Middle of the Linked List [1]
 - Delete the Middle Node of a Linked List [1] 
-- Intermediate Problems (Medium)
 - Reverse Linked List [2]
 - Linked List Cycle [2]
 - Intersection of Two Linked Lists [2]
@@ -153,7 +152,6 @@
 - Palindrome Linked List [2]
 - Odd Even Linked List [2]
 - Linked List Cycle II [2] 
-- Advanced Problems (Medium/Hard)
 - Sort List [3]
 - Copy List with Random Pointer [3]
 - Merge k Sorted Lists [3]
