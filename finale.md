@@ -139,24 +139,26 @@
 - Sum of Absolute Differences in a Sorted Array
 
 ## Linked List
-- Add Two Numbers
-- Convert Binary Number in a Linked List to Integer
-- Copy List with Random Pointer
-- Delete the Middle Node of a Linked List
-- Intersection of Two Linked Lists
-- Linked List Cycle
-- Linked List Cycle II
-- Linked List Random Node
-- Merge k Sorted Lists
-- Merge Two Sorted Lists
-- Middle of the Linked List
-- Odd Even Linked List
-- Palindrome Linked List
-- Remove Duplicates from Sorted List
-- Remove Nth Node From End of List
-- Reverse Linked List
-- Reverse Nodes in k-Group
-- Sort List
+- Convert Binary Number in a Linked List to Integer [1]
+- Merge Two Sorted Lists [1]
+- Remove Duplicates from Sorted List [1]
+- Middle of the Linked List [1]
+- Delete the Middle Node of a Linked List [1] 
+- Intermediate Problems (Medium)
+- Reverse Linked List [2]
+- Linked List Cycle [2]
+- Intersection of Two Linked Lists [2]
+- Remove Nth Node From End of List [2]
+- Add Two Numbers [2]
+- Palindrome Linked List [2]
+- Odd Even Linked List [2]
+- Linked List Cycle II [2] 
+- Advanced Problems (Medium/Hard)
+- Sort List [3]
+- Copy List with Random Pointer [3]
+- Merge k Sorted Lists [3]
+- Reverse Nodes in k-Group [3]
+- Linked List Random Node [3] 
 
 ## Binary Search
 - Binary Search
