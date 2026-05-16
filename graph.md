@@ -62,3 +62,26 @@ This list is heavily curated for top-tier FAANG interviews (L4/L5 / SDE-2 levels
 * Word Ladder (Transition building + Bidirectional BFS optimization)
 * Snakes And Ladders / Open The Lock
 * Shortest Path with Alternating Colors
+
+
+**1. Bitmask BFS (State Space Search)**
+At the SDE-2 level, especially at Google, standard BFS is often not enough. Candidates must know how to traverse a graph where the "visited" state is not just a node, but a combination of the node *and* the items collected or nodes visited so far.
+
+* **SDE-2 Expectation:** Recognizing that `N <= 15` in a graph problem means you should use an integer bitmask to represent visited states inside your BFS queue.
+* *Shortest Path Visiting All Nodes* (The quintessential Bitmask BFS)
+* *Shortest Path to Get All Keys*
+
+**2. Articulation Points & Bridges (Tarjan's Lite)**
+While full Tarjan's for Strongly Connected Components is generally considered CP territory, finding bridges in an undirected graph is a highly tested concept, largely due to one specific problem heavily favored by Amazon.
+
+* **SDE-2 Expectation:** Understanding how to use a `discovery_time` and `lowest_reachable_time` array during a DFS to identify critical vulnerabilities in a network.
+* *Critical Connections in a Network*
+
+**3. Bidirectional BFS (Explicit Callout)**
+You mentioned it briefly next to *Word Ladder*, but it deserves a spotlight in the expectations.
+
+* **SDE-2 Expectation:** The ability to explain *why* Bidirectional BFS is used (it reduces the search space from `b^d` to `2 * b^(d/2)`) and how to properly manage two expanding frontiers using HashSets to find the intersection.
+* *Word Ladder I & II*
+* *Minimum Genetic Mutation*
+
+### **Final Verdict**
