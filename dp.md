@@ -122,3 +122,28 @@ This list is heavily curated for top-tier FAANG interviews (L4/L5 / SDE-2 levels
 * Parallel Courses III (Scheduling and Max Time DP)
 * Shortest Path in DAG (DP formulation)
 * Counting paths in DAG
+
+### **How to Make It a 10/10 (Constructive Additions)**
+
+To make this the ultimate, exhaustive mastery list, consider adding the following three missing nuances:
+
+**1. Probability and Combinatorial DP**
+This is a highly tested sub-genre, particularly at Google and Meta. It tests a candidate's ability to handle fractional states and expected values.
+
+* **SDE-2 Expectation:** Handling floating-point states and recognizing when paths diverge with specific probabilities.
+* *Knight Probability in Chessboard*
+* *Soup Servings*
+* *Dice Roll Simulation*
+
+**2. DP + Trie / Advanced String Matching**
+While you have the core string patterns in Section 2, FAANG often combines String DP with a Trie to optimize dictionary lookups from $O(L)$ to $O(1)$ per character.
+
+* **SDE-2 Expectation:** Recognizing when a standard `HashSet` lookup inside a Word Break DP is too slow and upgrading the architecture with a Trie.
+* *Concatenated Words*
+* *Word Break II* (revisited with Trie optimization)
+
+**3. The "Why" Between Top-Down vs. Bottom-Up**
+Add a meta-expectation regarding communication. At the SDE-2 level, a candidate shouldn't just default to Bottom-Up Tabulation. They need to articulate *why* they are choosing one over the other.
+
+* **SDE-2 Expectation:** The ability to explain that Top-Down (Memoization) is superior when the state space is massive but sparse (e.g., *Burst Balloons* or *Regular Expression Matching*), whereas Bottom-Up is superior for strict cache-locality and $O(1)$ space optimization.
+
