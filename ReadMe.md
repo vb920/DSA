@@ -1,5 +1,4 @@
 # DSA
-### https://phuongdinh1411.github.io/cses-analyses/
 
 ## Design - 38
 - Min Stack (Med.)
