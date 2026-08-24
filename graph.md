@@ -10,6 +10,7 @@
 * Flood Fill
 * Pacific Atlantic Water Flow
 * Surrounded Regions / Number of Enclaves / Number of Closed Islands
+* *Shortest Path in Binary Matrix (LC 1091)** 
 
 ## 2. Multi-Source BFS (Explicit Pattern)
 * **SDE-2 Expectation:** Seeding the queue with ALL sources at distance 0 simultaneously (not running BFS per source), and recognizing "distance from nearest X" phrasing as the trigger.
@@ -101,6 +102,16 @@
 * Shortest Path with Alternating Colors
 
 ---
+
+## Verdict
+
+**Coverage: ~90% as-is → 100% after 3 small fixes (~5 problems total)**
+
+| Fix | Problems Added |
+|---|---|
+| Bipartite subsection (12a) | LC 785, LC 886 (+ LC 2767 already present) |
+| Functional graph cycles in #9 | LC 2360, LC 2127 |
+| Game-state problem in #12 | LC 913 |
 
 ### Final Sheet Stats
 
