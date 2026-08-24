@@ -174,6 +174,19 @@
 
 ---
 
+## Verdict
+
+**Coverage: ~92% as-is → 100% after 5 small fixes (~6 problems total)**
+
+| Fix | Problems Added |
+|---|---|
+| Stack-State DP subsection | LC 32, LC 85 |
+| Arithmetic subsequences in #4 | LC 1027, LC 1218 |
+| Positional DP in #8 | LC 801, LC 983 |
+| Matrix Exponentiation section | LC 509 variant |
+| Scramble String in #11 | LC 87 |
+
+
 ### Final Sheet Stats
 
 | Metric | Value |
