@@ -1,189 +1,223 @@
-Here’s your DSA pattern list, cleaned up and numbered:
+# 📋 Final DSA Pattern Sheet — Google L5 (Pure DSA)
+
+**Total: 163 patterns | 16 sections**
+
+---
+
+## Section 1: Arrays, Hashing, Prefix Sums & Two Pointers
 
 1. **Array, String & Matrix Mechanics**
 2. **Fundamental Hashing & Frequency Counting**
 3. **Prefix Sums, Difference Arrays & Prefix-Sum Hashing**
 4. **Two-Pointer Foundations**
 5. **Sorting, Pair Search & Multipointer Expansion**
-6. **Fixed-Size Sliding Windows**
-7. **Variable-Size Sliding Windows**
-8. **Monotonic Sliding Windows**
-9. **Binary Search — Exact Search with Boundaries**
-10. **Binary Search as a Sorted Lookup Tool**
-11. **Structural Binary Search**
-12. **Rotated Sorted Arrays**
-13. **Binary Search on Answer — Minimum/Maximum Feasible Values**
-14. **Counting Values at or Below a Candidate**
-15. **Interval Representation & Basic Manipulation**
-16. **Meeting & Occupancy Intervals**
-17. **Interval Scheduling & Coverage**
-18. **Dynamic Interval Structures**
-19. **Greedy — Direct Local Choices & Resource Invariance**
-20. **Greedy — Reachability & Coverage Invariance**
-21. **Greedy — Ordering & Constructive Strategies**
-22. **Greedy — Scheduling with Heaps**
-23. **Advanced Greedy Transformations**
+6. **Bucket Sort as a Pattern** *(LC 451, 347, 692)*
+7. **Boyer-Moore Voting & Counting Sort** *(LC 169, 229, 164, 274)*
+8. **Quickselect & Randomized Selection** *(LC 215, 973)*
+9. **Divide & Conquer on Arrays — Merge-Sort Counting** *(LC 493, 327, 315)*
 
-### Linked Lists
+## Section 2: Sliding Windows
 
-24. **Linked List — Basic Traversal & Pointer Mechanics**
-25. **Cycle Detection**
-26. **Reversal & Structural Rewriting of Linked Lists**
-27. **Deletion & Local Mutation of Linked Lists**
-28. **Arithmetic, Merging & Sorting of Linked Lists**
-29. **Lists with Additional Relationships**
-30. **Doubly Linked Lists & Stateful Design**
+10. **Fixed-Size Sliding Windows**
+11. **Variable-Size Sliding Windows**
+12. **Monotonic Sliding Windows**
 
-### Stacks & Queues
+## Section 3: Binary Search
 
-31. **Stack & Queue — Fundamental Mechanics**
-32. **Adjacent Cancellation & Reduction**
-33. **Stack-Based Evaluation & Parsing**
-34. **Monotonic Stack Foundations**
-35. **Greedy Monotonic Stacks**
-36. **Contribution & Histogram Stacks**
-37. **Stack & Queue Implementation**
-38. **Queue & Deque Simulation**
-39. **Monotonic Deque — Review & Generalization**
-40. **Specialized Stack & Iterator Design**
+13. **Binary Search — Exact Search with Boundaries**
+14. **Binary Search as a Sorted Lookup Tool**
+15. **Structural Binary Search**
+16. **Rotated Sorted Arrays**
+17. **Binary Search on Answer — Minimum/Maximum Feasible Values**
+18. **Counting Values at or Below a Candidate**
 
-### Recursion & Backtracking
+## Section 4: Intervals & Greedy
 
-41. **Recursion & Backtracking Foundations**
-42. **Subsets & Combinations**
-43. **Permutations & Constructive Search**
-44. **Valid Sequence Construction & Grid Backtracking**
-45. **Graph & Trie-Assisted Backtracking**
-46. **Memoized Decision Search**
-47. **Advanced Parsing & Expression Search**
+19. **Interval Representation & Basic Manipulation**
+20. **Meeting & Occupancy Intervals**
+21. **Sweep Line Events** *(LC 218, 391, 850)*
+22. **Interval Scheduling & Coverage**
+23. **Dynamic Interval Structures**
+24. **Greedy — Direct Local Choices & Resource Invariance**
+25. **Greedy — Reachability & Coverage Invariance**
+26. **Greedy — Ordering & Constructive Strategies**
+27. **Greedy — Scheduling with Heaps**
+28. **Advanced Greedy Transformations**
 
-### Bit Manipulation
+## Section 5: Linked Lists
 
-48. **Bitwise Binary Representation Fundamentals**
-49. **Carry & Arithmetic**
-50. **XOR Calculation & Cancellation**
-51. **Prefix XOR & Reconstruction**
-52. **Range & Aggregate Bitwise Operations**
-53. **Binary Construction**
-54. **Binary Tries**
-55. **Bitmask Dynamic Programming**
+29. **Linked List — Basic Traversal & Pointer Mechanics**
+30. **Cycle Detection**
+31. **Reversal & Structural Rewriting of Linked Lists**
+32. **Deletion & Local Mutation of Linked Lists**
+33. **Arithmetic, Merging & Sorting of Linked Lists**
+34. **Lists with Additional Relationships**
+35. **Doubly Linked Lists & Stateful Design**
 
-### Trees & Binary Search Trees
+## Section 6: Stacks & Queues
 
-56. **Trees & Binary Search Trees — Basic Traversals**
-57. **Structural Comparison & Transformation of Trees**
-58. **Height-Based Post-Order Patterns**
-59. **Breadth-First Tree Traversal**
-60. **Root-to-Leaf Paths**
-61. **Ancestors, Distances & Relationships**
-62. **Tree Construction**
-63. **Serialization & Subtree Identity**
-64. **Binary Search Tree Fundamentals**
-65. **In-Order as Sorted-Order Processing**
-66. **Binary Search Tree Queries & Iterators**
-67. **Advanced Binary Search Tree Construction & Counting**
+36. **Stack & Queue — Fundamental Mechanics**
+37. **Adjacent Cancellation & Reduction**
+38. **Stack-Based Evaluation & Parsing**
+39. **Expression Parsing & Evaluation Trees** *(LC 1597, 726, 772)*
+40. **Monotonic Stack Foundations**
+41. **Greedy Monotonic Stacks + Contribution/Histogram Stacks**
+42. **Stack & Queue Implementation**
+43. **Queue & Deque Simulation**
+44. **Monotonic Deque — Review & Generalization**
+45. **Specialized Stack & Iterator Design**
 
-### Tries
+## Section 7: Recursion & Backtracking
 
-68. **Trie Foundations**
-69. **Flexible & Approximate Search**
-70. **Prefix Ranking & Suggestions**
-71. **Prefix & Suffix Relationships**
-72. **Trie-Assisted Search & Hierarchical Structures**
+46. **Recursion & Backtracking Foundations**
+47. **Subsets & Combinations**
+48. **Permutations & Constructive Search**
+49. **Valid Sequence Construction & Grid Backtracking**
+50. **Graph & Trie-Assisted Backtracking**
+51. **Advanced Parsing & Expression Search**
 
-### Heaps & Priority Queues
+## Section 8: Bit Manipulation
 
-73. **Heaps & Priority Foundations**
-74. **Multi-Way Merge**
-75. **Greedy Selections with Heaps**
-76. **Scheduling & Resource Allocation**
-77. **Streaming & Stateful Heap Design**
-78. **Monotonic & Optimization Heaps**
-79. **Graph & Matrix Heaps**
-80. **Heap-Based Sequence Generation**
+52. **Bitwise Binary Representation Fundamentals**
+53. **Carry & Arithmetic**
+54. **XOR Calculation & Cancellation**
+55. **Prefix XOR & Reconstruction**
+56. **Range & Aggregate Bitwise Operations**
+57. **Binary Construction**
+58. **Binary Tries**
+59. **Bitmask Dynamic Programming**
 
-### Graphs
+## Section 9: Trees, BSTs & Tries
 
-81. **Graph Representation & Basic Traversal**
-82. **Bipartite Graphs & Coloring**
-83. **Grid Traversal Foundations**
-84. **Multi-Source Grid BFS**
-85. **Unweighted Shortest Path**
-86. **Word Transformation BFS**
-87. **BFS with Expanded States**
-88. **Disjoint Set Union Foundations**
-89. **Advanced Disjoint Set Union**
-90. **Topological Sort Foundations**
-91. **Topological Dynamic Programming**
-92. **Multi-Dependency Ordering**
-93. **Weighted Graph Foundations**
-94. **Restricted & Layered Shortest Paths**
-95. **Minimum Spanning Tree**
-96. **Cycle Detection in Functional Graphs**
-97. **Eulerian Paths**
-98. **Bridges & Articulation Points**
-99. **Advanced Graph State & Game Problems**
+60. **Trees & BSTs — Basic Traversals**
+61. **Structural Comparison & Transformation of Trees**
+62. **Height-Based Post-Order Patterns**
+63. **Breadth-First Tree Traversal**
+64. **Root-to-Leaf Paths**
+65. **Ancestors, Distances & Relationships**
+66. **Tree Construction**
+67. **Serialization & Subtree Identity**
+68. **Binary Search Tree Fundamentals**
+69. **In-Order as Sorted-Order Processing**
+70. **Binary Search Tree Queries & Iterators**
+71. **Advanced BST Construction & Counting**
+72. **Trie Foundations**
+73. **Flexible & Approximate Search**
+74. **Prefix Ranking & Suggestions**
+75. **Prefix & Suffix Relationships**
+76. **Trie-Assisted Search & Hierarchical Structures**
 
-### Range Queries
+## Section 10: Heaps & Priority Queues
 
-100. **Range Query Foundations**
-101. **Static One-Dimensional Queries**
-102. **Static Two-Dimensional Queries**
-103. **Segment Tree Foundations**
-104. **Segment Tree Node Composition**
-105. **Lazy Propagation**
-106. **Persistence & Transient Queries**
-107. **Order Statistics & Offline Query Processing**
-108. **Tree Range Queries**
+77. **Heaps & Priority Foundations**
+78. **Multi-Way Merge**
+79. **Greedy Selections with Heaps**
+80. **Scheduling & Resource Allocation**
+81. **Streaming & Stateful Heap Design**
+82. **Monotonic & Optimization Heaps**
+83. **Graph & Matrix Heaps**
+84. **Heap-Based Sequence Generation**
 
-### Dynamic Programming
+## Section 11: Graphs
 
-109. **Dynamic Programming Foundations**
-110. **1D Dynamic Programming**
-111. **Basic Counting & Unbounded Transitions**
-112. **Knapsack Foundations**
-113. **State-Compressed Tree DP**
-114. **Longest Increasing Subsequence Family**
-115. **Arithmetic & Monotonic Subsequences**
-116. **Stack-State Dynamic Programming**
-117. **Grid-Path Dynamic Programming**
-118. **Grid-Shaped Dynamic Programming**
-119. **Palindromic Dynamic Programming**
-120. **Two-String Dynamic Programming**
-121. **Pattern-Matching Dynamic Programming**
-122. **Word Segmentation & Dictionary DP**
-123. **Distance-Based Subsequences & String Counting**
-124. **Partition Dynamic Programming**
-125. **Interval Dynamic Programming**
-126. **Complex Positional & Circular DP**
-127. **Probability Dynamic Programming**
-128. **Digit Dynamic Programming**
-129. **Tree Dynamic Programming**
-130. **Game Dynamic Programming**
-131. **Advanced Recurrence & DP Optimization**
+85. **Graph Representation & Basic Traversal**
+86. **Bipartite Graphs & Coloring**
+87. **Grid Traversal Foundations**
+88. **Multi-Source Grid BFS**
+89. **Unweighted Shortest Path**
+90. **Word Transformation BFS**
+91. **BFS with Expanded States**
+92. **Disjoint Set Union Foundations**
+93. **Advanced Disjoint Set Union**
+94. **Topological Sort Foundations**
+95. **Topological Dynamic Programming**
+96. **Multi-Dependency Ordering**
+97. **Weighted Graph Foundations**
+98. **Restricted & Layered Shortest Paths**
+99. **Minimum Spanning Tree**
+100. **Functional Graph Cycles + Bridges/Articulation Points**
+101. **Advanced Graph State & Game Problems**
 
-### Advanced String Algorithms
+## Section 12: Range Queries
 
-132. **Advanced String Algorithm Foundations**
-133. **Prefix Function & KMP**
-134. **Z-Algorithm**
-135. **Rolling Hash**
-136. **Manacher’s Algorithm**
-137. **Trie-Based Advanced String Matching**
-138. **Suffix Array Construction**
-139. **Suffix Array & LCP**
-140. **Suffix Automaton**
+102. **Range Query Foundations**
+103. **Static One-Dimensional Queries**
+104. **Static Two-Dimensional Queries**
+105. **Segment Tree Foundations**
+106. **Segment Tree Node Composition**
+107. **Lazy Propagation**
+108. **Order Statistics & Offline Query Processing**
+109. **Tree Range Queries**
+
+## Section 13: Dynamic Programming
+
+110. **Dynamic Programming Foundations**
+111. **1D Dynamic Programming**
+112. **Basic Counting & Unbounded Transitions**
+113. **Knapsack Foundations**
+114. **State-Compressed Tree DP**
+115. **Longest Increasing Subsequence Family**
+116. **Arithmetic & Monotonic Subsequences**
+117. **Stack-State Dynamic Programming**
+118. **Grid-Path Dynamic Programming**
+119. **Grid-Shaped Dynamic Programming**
+120. **Palindromic Dynamic Programming**
+121. **Two-String Dynamic Programming**
+122. **Interleaving & Shuffle Reconstruction** *(LC 97, 87 Scramble String)*
+123. **Pattern-Matching Dynamic Programming**
+124. **Word Segmentation & Dictionary DP**
+125. **Distance-Based Subsequences & String Counting**
+126. **Partition Dynamic Programming**
+127. **Interval Dynamic Programming**
+128. **Complex Positional & Circular DP**
+129. **Probability Dynamic Programming**
+130. **Digit Dynamic Programming**
+131. **Tree Dynamic Programming**
+132. **Memoized Decision Search + Game Dynamic Programming**
+133. **Nim & Grundy Numbers (Sprague-Grundy)** *(LC 292, 877, 464)*
+134. **Matrix Exponentiation / Fast Recurrence** *(LC 509 via matrix pow)*
+135. **Advanced Recurrence & DP Optimization**
+
+## Section 14: Advanced String Algorithms
+
+136. **Advanced String Algorithm Foundations**
+137. **Prefix Function/KMP + Z-Algorithm** *(merged)*
+138. **Rolling Hash**
+139. **Manacher's Algorithm**
+140. **Trie-Based Advanced String Matching**
 141. **Complex Advanced String Problems**
 
-### Flow, Matching & Network Optimization
+## Section 15: Math, Geometry & Randomization
 
-142. **Bipartite Matching Foundations**
-143. **Hopcroft–Karp**
-144. **Network Flow Foundations**
-145. **Dinic’s Algorithm**
-146. **Minimum-Cut Modeling**
-147. **Lower Bounds & Circulation**
-148. **Minimum-Cost Maximum Flow**
+142. **Geometry Basics** *(LC 149, 587 convex hull, 356)*
+143. **Randomized Algorithms — Expected Analysis** *(LC 384 shuffle, LC 528 weighted pick)*
+144. **Reservoir Sampling & Streaming Randomization** *(LC 382, 398, 470)*
+
+## Section 16: Flow & Matching (Conceptual Only)
+
+145. **Bipartite Matching Foundations**
+146. **Network Flow Foundations** *(Ford-Fulkerson idea only)*
+147. **Dinic's Algorithm** *(conceptual level graph + blocking flow)*
+148. **Minimum-Cut Modeling**
+
+---
+
+### Removed from original sheet:
+❌ Suffix Automaton · Suffix Array Construction · Suffix Array & LCP · Hopcroft–Karp · Eulerian Paths · Persistence & Transient Queries · Lower Bounds & Circulation · Minimum-Cost Max Flow
+
+### Added:
+✅ Bucket Sort · Boyer-Moore Voting · Quickselect · Merge-Sort Counting · Sweep Line · Expression Trees · Interleaving/Shuffle DP · Nim & Grundy · Matrix Exponentiation · Geometry · Randomized Algorithms · Reservoir Sampling
+
+---
+
+### Study Priority Tiers
+
+| Tier | Patterns |
+|---|---|
+| 🔴 **Core — master cold** | 1–59, 60–84 |
+| 🟠 **Must be solid** | 85–109, 110–135 |
+| 🟡 **Important** | 136–144 |
+| 🟢 **Conceptual only** | 145–148 |
 
 ### Composite Data Structure Design
 
@@ -202,24 +236,3 @@ Here’s your DSA pattern list, cleaned up and numbered:
 161. **Hierarchical File Systems**
 162. **Mutable Graph APIs**
 163. **Final Composite Design Problems**
-
-### Complete Pattern Count
-
-You now have **163 DSA patterns**, organized into these major stages:
-
-1. **Arrays, Hashing, Prefix Sums & Two Pointers** — 1–5
-2. **Sliding Windows** — 6–8
-3. **Binary Search** — 9–14
-4. **Intervals & Greedy** — 15–23
-5. **Linked Lists** — 24–30
-6. **Stacks & Queues** — 31–40
-7. **Recursion & Backtracking** — 41–47
-8. **Bit Manipulation** — 48–55
-9. **Trees, BSTs & Tries** — 56–72
-10. **Heaps & Priority Queues** — 73–80
-11. **Graphs** — 81–99
-12. **Range Queries** — 100–108
-13. **Dynamic Programming** — 109–131
-14. **Advanced String Algorithms** — 132–141
-15. **Advanced Flow & Matching** — 142–148
-16. **Composite Data Structure Design** — 149–163
