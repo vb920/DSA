@@ -147,3 +147,56 @@ Add a meta-expectation regarding communication. At the SDE-2 level, a candidate 
 
 * **SDE-2 Expectation:** The ability to explain that Top-Down (Memoization) is superior when the state space is massive but sparse (e.g., *Burst Balloons* or *Regular Expression Matching*), whereas Bottom-Up is superior for strict cache-locality and $O(1)$ space optimization.
 
+---
+
+## 📘 DP Sheet — Additions
+
+### **17. Digit DP (Simplified — Tight-Bound Template)**
+* **SDE-2 Expectation:** Recognizing "count numbers ≤ N with property X" as a digit-position recursion with a `tight` boolean flag. Only 2–3 problems needed — know the template, not the theory.
+* *Number of Digit One (LC 233)*
+* *Numbers At Most N Given Digit Set (LC 902)*
+* *Count Numbers with Unique Digits (LC 357)* — warm-up, closed-form acceptable
+
+### **18. Bitmask Feasibility & Partitioning (Complement to #14)**
+* **SDE-2 Expectation:** Distinguishing TSP-style *optimization* over masks from *feasibility* checks (`can[mask] = true/false`) and subset-enumeration tricks (`sub = (sub-1) & mask`).
+* *Partition to K Equal Sum Subsets (LC 698)*
+* *Distribute Repeating Integers (LC 1655)*
+* *Matchsticks to Square (LC 473)* — same pattern, different skin
+
+### **19. Counting DP with Modular Arithmetic**
+* **SDE-2 Expectation:** Handling large counts via `% 1e9+7` cleanly, defining transitions that sum over previous states rather than max/min.
+* *Domino and Tromino Tiling (LC 790)*
+* *Count Vowels Permutation (LC 1220)*
+* *Number of Ways to Stay in the Same Place After Some Steps (LC 1269)*
+
+### **20. Tree DP with Rerooting**
+* **SDE-2 Expectation:** Two-pass DFS: compute subtree answers bottom-up, then re-root by pushing parent contributions top-down. Recognize "answer for every node as root" phrasing instantly.
+* *Sum of Distances in Tree (LC 834)*
+* *Reorder Routes variant practice: Maximum Score of a Node Sequence? No — use Re-rooting on LC 834 + LC 310 Minimum Height Trees (topological peel, adjacent technique)*
+
+### **21. Binary Search on Answer + Greedy Feasibility Check**
+* **SDE-2 Expectation:** Spotting "minimize the maximum" / "maximize the minimum" phrasing → binary search the answer, validate with an O(N) greedy sweep. Know when this beats direct DP.
+* *Split Array Largest Sum (LC 410)*
+* *Find Minimum Time to Finish All Jobs (LC 1723)* — binary search vs bitmask comparison
+* *Koko Eating Bananas (LC 875)* — baseline warm-up
+
+### **22. Probability & Combinatorial DP** *(your proposed addition — formalized)*
+* **SDE-2 Expectation:** Floating-point states, expected-value accumulation, and probability of reaching a state rather than cost.
+* *Knight Probability in Chessboard (LC 688)*
+* *Soup Servings (LC 808)*
+* *Dice Roll Simulation (LC 1223)*
+
+### **23. DP + Trie Hybrid** *(your proposed addition — formalized)*
+* **SDE-2 Expectation:** Upgrading HashSet dictionary lookups inside string DP to Trie traversal when word lengths are bounded or prefixes overlap heavily.
+* *Concatenated Words (LC 472)*
+* *Word Break II (LC 140)* — Trie-optimized revisit
+* *Extra: Longest Word in Dictionary (LC 720)* — light warm-up
+
+### **24. Meta-Pattern: Top-Down vs Bottom-Up Articulation** *(your proposed addition — formalized)*
+* **SDE-2 Expectation:** Verbally justifying your choice before coding:
+  - **Top-down (memo):** sparse/massive state space, early termination natural (*Burst Balloons*, *Regex Matching*)
+  - **Bottom-up (tabulation):** full table needed anyway, enables O(1) rolling space (*House Robber*, *Coin Change*)
+  - **Hybrid:** memoize first during interview, offer tabulation as follow-up optimization
+* Practice articulation on: *Edit Distance*, *Burst Balloons*, *Regular Expression Matching*
+
+---
