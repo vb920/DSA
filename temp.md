@@ -12,7 +12,7 @@
 8. Quickselect & Randomized Selection  
 9. Divide and Conquer on Arrays and Merge-Sort Counting  
 
-The official <Organization>LeetCode</Organization> problem set currently includes dedicated tags for arrays, hashing, matrices, two pointers, prefix sums, quickselect, bucket sort, counting sort, divide and conquer, and merge sort, so this curriculum deliberately mixes those categories instead of treating Section 1 as only “array questions.” 【1-a96d48】【2-706526】
+The official <Organization>LeetCode</Organization> problem set currently includes dedicated tags for arrays, hashing, matrices, two pointers, prefix sums, quickselect, bucket sort, counting sort, divide and conquer, and merge sort, so this curriculum deliberately mixes those categories instead of treating Section 1 as only “array questions.” 
 
 ## How to use this list
 
@@ -896,7 +896,7 @@ This curriculum contains **200 questions**, divided into:
 - **Section 4: Intervals & Greedy — 60 questions**
 - **Section 5: Linked Lists — 50 questions**
 
-The categorization intentionally overlaps when a problem teaches more than one pattern. For example, a problem may use both a sliding window and a monotonic deque, or both interval sorting and greedy selection. LeetCode currently maintains dedicated tags for sliding window, binary search, greedy, sorting, linked lists, heaps, and monotonic queues, which supports treating these as related but independently practiced families. 【1-ca4012】【2-67eac9】【3-2f7acb】【4-002cec】
+The categorization intentionally overlaps when a problem teaches more than one pattern. For example, a problem may use both a sliding window and a monotonic deque, or both interval sorting and greedy selection. LeetCode currently maintains dedicated tags for sliding window, binary search, greedy, sorting, linked lists, heaps, and monotonic queues, which supports treating these as related but independently practiced families.
 
 ## Priority legend
 
@@ -2145,7 +2145,7 @@ This curriculum contains **150 questions**:
 
 The selection covers the full range of scenarios in your pattern sheet: stack reduction, parsing, monotonic structures, queue simulation, subset and permutation search, constrained construction, trie-assisted backtracking, XOR, bitmasks, binary construction, binary tries, and state-compressed DP.
 
-LeetCode’s problem set currently includes dedicated classifications for stack, queue, monotonic stack, recursion, backtracking, bit manipulation, bitmask, trie, design, and simulation. 【1-a01405】【2-d0c088】【3-450a5c】【4-8d7272】【5-e02822】【6-7eab12】
+LeetCode’s problem set currently includes dedicated classifications for stack, queue, monotonic stack, recursion, backtracking, bit manipulation, bitmask, trie, design, and simulation. 
 
 ## Priority legend
 
@@ -3231,7 +3231,7 @@ Section 9 is large enough that a short list would leave important gaps. The curr
 75. Prefix & Suffix Relationships  
 76. Trie-Assisted Search & Hierarchical Structures  
 
-The current <Organization>LeetCode</Organization> problem catalogue contains hundreds of tree and BFS/DFS problems, along with dedicated Binary Tree, BST and Trie classifications. For strict preparation, merely completing traversal questions is insufficient. You need structural recursion, path-state reasoning, tree construction, serialization, BST invariants, iterative traversal, trie design and composite search. 【1-c2aba1】【2-855619】【3-c34427】【4-866a14】
+The current <Organization>LeetCode</Organization> problem catalogue contains hundreds of tree and BFS/DFS problems, along with dedicated Binary Tree, BST and Trie classifications. For strict preparation, merely completing traversal questions is insufficient. You need structural recursion, path-state reasoning, tree construction, serialization, BST invariants, iterative traversal, trie design and composite search.
 
 ---
 
@@ -4835,7 +4835,7 @@ This curriculum contains approximately **145 unique primary questions**, with ad
 100. Functional Graph Cycles + Bridges/Articulation Points  
 101. Advanced Graph State & Game Problems  
 
-The current <Organization>LeetCode</Organization> catalogue maintains substantial dedicated collections for Graph, DFS, BFS, Union Find, Topological Sort, Shortest Path, Minimum Spanning Tree, Strongly Connected Components, Eulerian Circuits, and biconnected-component problems. 【1-5cece2】【2-8d15fe】【3-770683】【4-805942】【5-8f9f36】【6-96dff1】
+The current <Organization>LeetCode</Organization> catalogue maintains substantial dedicated collections for Graph, DFS, BFS, Union Find, Topological Sort, Shortest Path, Minimum Spanning Tree, Strongly Connected Components, Eulerian Circuits, and biconnected-component problems. 
 
 ---
 
@@ -9077,3 +9077,2536 @@ For an unseen DP problem, you should be able to do the following within approxim
 10. Discuss edge cases and overflow.
 
 The decisive skill is not remembering hundreds of recurrences. It is learning to describe the future using the smallest sufficient state and then proving that every transition moves to a strictly smaller, already solvable subproblem.
+# Combined Curriculum: Sections 10, 14, 15, 16, 17 & 18
+
+## Strict Google L5 Preparation
+
+This combined curriculum covers:
+
+- **Section 10:** Heaps & Priority Queues
+- **Section 14:** Advanced String Algorithms
+- **Section 15:** Math, Geometry & Randomization
+- **Section 16:** Flow & Matching
+- **Section 17:** Composite Data Structure Design
+- **Section 18:** Additional Advanced Patterns
+
+These areas differ in priority. Heaps, data-structure design, Fenwick trees, coordinate compression, Eulerian traversal, SCC, LCA, and state-machine DP deserve serious implementation practice. Flow, advanced geometry, Manacher, Sparse Table, and some matching techniques are more selective.
+
+The current <Organization>LeetCode</Organization> catalogue has dedicated classifications for Heap, Design, Geometry, String Matching, Rolling Hash, Randomized Algorithms, Reservoir Sampling, Binary Indexed Tree, Strongly Connected Components, Eulerian Circuits, and Minimum Spanning Tree. 
+
+## Priority legend
+
+- **P0:** Master cold.
+- **P1:** Must solve independently.
+- **P2:** Important but lower-frequency.
+- **Stretch:** Advanced strict-L5 boundary.
+- **Premium:** Replace with an equivalent problem if inaccessible.
+
+---
+
+# Section 10: Heaps & Priority Queues
+
+## Patterns covered
+
+77. Heap & Priority Foundations  
+78. Multi-Way Merge  
+79. Greedy Selections with Heaps  
+80. Scheduling & Resource Allocation  
+81. Streaming & Stateful Heap Design  
+82. Monotonic & Optimization Heaps  
+83. Graph & Matrix Heaps  
+84. Heap-Based Sequence Generation  
+
+---
+
+## Pattern 77: Heap & Priority Foundations
+
+### Core selection
+
+1. **LC 215 — Kth Largest Element in an Array**  
+   Medium | P0  
+   Focus: Bounded min-heap, max-heap and Quickselect comparison.
+
+2. **LC 703 — Kth Largest Element in a Stream**  
+   Easy | P0  
+   Focus: Maintain exactly `k` largest values.
+
+3. **LC 347 — Top K Frequent Elements**  
+   Medium | P0  
+   Focus: Heap versus frequency buckets.
+
+4. **LC 692 — Top K Frequent Words**  
+   Medium | P0  
+   Focus: Frequency with reverse lexical tie-breaking.
+
+5. **LC 973 — K Closest Points to Origin**  
+   Medium | P0  
+   Focus: Bounded max-heap versus Quickselect.
+
+6. **LC 1046 — Last Stone Weight**  
+   Easy | P0  
+   Focus: Repeated extraction of largest values.
+
+7. **LC 2558 — Take Gifts From the Richest Pile**  
+   Easy | P1  
+   Focus: Repeated maximum replacement.
+
+8. **LC 2441 — Largest Positive Integer That Exists With Its Negative**  
+   Easy | P2  
+   Focus: Contrast heap with hashing.
+
+9. **LC 506 — Relative Ranks**  
+   Easy | P1  
+   Focus: Rank assignment through ordered extraction.
+
+10. **LC 1337 — The K Weakest Rows in a Matrix**  
+    Easy | P1  
+    Focus: Composite heap keys.
+
+11. **LC 2099 — Find Subsequence of Length K With the Largest Sum**  
+    Easy | P1  
+    Focus: Select by value, return by original index.
+
+12. **LC 2335 — Minimum Amount of Time to Fill Cups**  
+    Easy | P1  
+    Focus: Heap simulation and mathematical shortcut.
+
+### Required heap decisions
+
+For every top-K question, determine:
+
+- Is `k` much smaller than `n`?
+- Is the input streaming?
+- Is full sorting unnecessary?
+- Are tie-breakers present?
+- Do results need original order?
+- Can buckets outperform a heap?
+- Can Quickselect avoid a logarithmic factor?
+
+---
+
+## Pattern 78: Multi-Way Merge
+
+13. **LC 23 — Merge k Sorted Lists**  
+    Hard | P0  
+    Focus: Heap of current heads and divide-and-conquer alternative.
+
+14. **LC 378 — Kth Smallest Element in a Sorted Matrix**  
+    Medium | P0  
+    Focus: Row-wise merge versus binary search on value.
+
+15. **LC 373 — Find K Pairs With Smallest Sums**  
+    Medium | P0  
+    Focus: Start one frontier per row or expand from `(0,0)`.
+
+16. **LC 632 — Smallest Range Covering Elements from K Lists**  
+    Hard | P0  
+    Focus: Heap minimum plus current global maximum.
+
+17. **LC 786 — K-th Smallest Prime Fraction**  
+    Medium | P1  
+    Focus: Fraction frontier expansion.
+
+18. **LC 1439 — Find the Kth Smallest Sum of a Matrix With Sorted Rows**  
+    Hard | Stretch  
+    Focus: Repeated bounded multi-way merging.
+
+19. **LC 264 — Ugly Number II**  
+    Medium | P0  
+    Focus: Heap generation versus multi-pointer DP.
+
+20. **LC 313 — Super Ugly Number**  
+    Medium | P1  
+    Focus: Merge multiple multiplicative sequences.
+
+21. **LC 719 — Find K-th Smallest Pair Distance**  
+    Hard | P0  
+    Focus: Contrast heap enumeration with binary-search counting.
+
+22. **LC 1508 — Range Sum of Sorted Subarray Sums**  
+    Medium | P1  
+    Focus: Heap merge for positive arrays.
+
+### Multi-way merge invariant
+
+Each sorted source contributes its smallest unconsumed candidate. After extracting from one source, advance only that source.
+
+---
+
+## Pattern 79: Greedy Selections with Heaps
+
+23. **LC 502 — IPO**  
+    Hard | P0  
+    Focus: Sort by capital, maximize available profit.
+
+24. **LC 630 — Course Schedule III**  
+    Hard | P0  
+    Focus: Accept courses, then remove the longest duration when infeasible.
+
+25. **LC 1642 — Furthest Building You Can Reach**  
+    Medium | P0  
+    Focus: Reserve ladders for the largest climbs.
+
+26. **LC 871 — Minimum Number of Refueling Stops**  
+    Hard | P0  
+    Focus: Lazily choose the largest past fuel source.
+
+27. **LC 857 — Minimum Cost to Hire K Workers**  
+    Hard | P0  
+    Focus: Sort by wage-to-quality ratio and retain smallest qualities.
+
+28. **LC 1354 — Construct Target Array With Multiple Sums**  
+    Hard | P0  
+    Focus: Reverse the largest-value operation.
+
+29. **LC 1962 — Remove Stones to Minimize the Total**  
+    Medium | P1  
+    Focus: Repeatedly apply the best reduction.
+
+30. **LC 2208 — Minimum Operations to Halve Array Sum**  
+    Medium | P0  
+    Focus: Maximum marginal reduction.
+
+31. **LC 2530 — Maximal Score After Applying K Operations**  
+    Medium | P1  
+    Focus: Repeated best-value extraction.
+
+32. **LC 2462 — Total Cost to Hire K Workers**  
+    Medium | P0  
+    Focus: Two candidate-front heaps.
+
+33. **LC 2813 — Maximum Elegance of a K-Length Subsequence**  
+    Hard | Stretch  
+    Focus: Replace duplicate categories using a heap.
+
+34. **LC 1383 — Maximum Performance of a Team**  
+    Hard | P0  
+    Focus: Sort by efficiency and retain top speeds.
+
+---
+
+## Pattern 80: Scheduling & Resource Allocation
+
+35. **LC 253 — Meeting Rooms II**  
+    Medium | P0 | Premium  
+    Focus: Minimum end-time heap.
+
+36. **LC 2402 — Meeting Rooms III**  
+    Hard | P0  
+    Focus: Available-resource heap plus occupied-resource heap.
+
+37. **LC 621 — Task Scheduler**  
+    Medium | P0  
+    Focus: Frequency formula and heap simulation.
+
+38. **LC 767 — Reorganize String**  
+    Medium | P0  
+    Focus: Most frequent available character with cooldown.
+
+39. **LC 358 — Rearrange String k Distance Apart**  
+    Hard | P0 | Premium  
+    Focus: Heap plus cooldown queue.
+
+40. **LC 1054 — Distant Barcodes**  
+    Medium | P1  
+    Focus: Frequency-based rearrangement.
+
+41. **LC 1882 — Process Tasks Using Servers**  
+    Medium | P0  
+    Focus: Free-server and busy-server heaps.
+
+42. **LC 1834 — Single-Threaded CPU**  
+    Medium | P0  
+    Focus: Sort by release time and schedule by duration.
+
+43. **LC 1942 — The Number of the Smallest Unoccupied Chair**  
+    Medium | P0  
+    Focus: Release occupied chairs before assigning a new one.
+
+44. **LC 1094 — Car Pooling**  
+    Medium | P1  
+    Focus: Heap of drop-off events versus difference array.
+
+45. **LC 1229 — Meeting Scheduler**  
+    Medium | P1 | Premium  
+    Focus: Earliest compatible intervals.
+
+46. **LC 659 — Split Array into Consecutive Subsequences**  
+    Medium | P0  
+    Focus: Extend the shortest sequence ending at the previous value.
+
+47. **LC  divide-into-groups scheduling variants**  
+    Optional  
+    Focus: Resource release must occur before allocation at equal timestamps.
+
+### Scheduling tie-breakers
+
+Be explicit about:
+
+- Release events occurring before allocation events.
+- Available resource ordered by identifier.
+- Busy resource ordered by finish time, then identifier.
+- Task ordered by duration, priority or arrival time.
+- Whether delayed work retains its original duration.
+
+---
+
+## Pattern 81: Streaming & Stateful Heap Design
+
+48. **LC 295 — Find Median from Data Stream**  
+    Hard | P0  
+    Focus: Two heaps and partition-size invariant.
+
+49. **LC 480 — Sliding Window Median**  
+    Hard | P0 / Stretch  
+    Focus: Two heaps with lazy deletion.
+
+50. **LC 703 — Kth Largest Element in a Stream**  
+    Easy | P0  
+    Focus: Fixed-size running top-K.
+
+51. **LC 1825 — Finding MK Average**  
+    Hard | Stretch  
+    Focus: Three ordered partitions and dynamic updates.
+
+52. **LC 2102 — Sequentially Ordinal Rank Tracker**  
+    Hard | P0  
+    Focus: Two heaps with a moving rank boundary.
+
+53. **LC 981 — Time Based Key-Value Store**  
+    Medium | P1  
+    Focus: Historical lookup rather than heap, useful contrast.
+
+54. **LC 895 — Maximum Frequency Stack**  
+    Hard | P0  
+    Focus: Frequency and recency.
+
+55. **LC 2034 — Stock Price Fluctuation**  
+    Medium | P0  
+    Focus: Lazy deletion or ordered maps under corrections.
+
+56. **LC 2349 — Design a Number Container System**  
+    Medium | P1  
+    Focus: Per-number min-heaps with stale indices.
+
+57. **LC 2353 — Design a Food Rating System**  
+    Medium | P0  
+    Focus: Per-category ranking and lazy deletion.
+
+### Two-heap median invariant
+
+Maintain:
+
+- Every value in the lower heap is no greater than every value in the upper heap.
+- Heap sizes differ by at most one.
+- The lower heap may contain one extra element.
+- Deletions are reconciled before reading heap tops.
+
+---
+
+## Pattern 82: Monotonic & Optimization Heaps
+
+58. **LC 239 — Sliding Window Maximum**  
+    Hard | P0  
+    Focus: Heap solution versus optimal monotonic deque.
+
+59. **LC 1438 — Longest Continuous Subarray With Absolute Difference ≤ Limit**  
+    Medium | P0  
+    Focus: Dual heaps or dual deques.
+
+60. **LC 1696 — Jump Game VI**  
+    Medium | P0  
+    Focus: Heap-optimized DP versus monotonic deque.
+
+61. **LC 1425 — Constrained Subsequence Sum**  
+    Hard | P0  
+    Focus: Maximum DP over a bounded previous range.
+
+62. **LC 218 — The Skyline Problem**  
+    Hard | P0  
+    Focus: Active-height heap with lazy removal.
+
+63. **LC 1845 — Seat Reservation Manager**  
+    Medium | P1  
+    Focus: Recycle released resource IDs.
+
+64. **LC 1675 — Minimize Deviation in Array**  
+    Hard | P0  
+    Focus: Normalize values, then repeatedly reduce the maximum.
+
+65. **LC 2551 — Put Marbles in Bags**  
+    Hard | P1  
+    Focus: Select largest and smallest split contributions.
+
+---
+
+## Pattern 83: Graph & Matrix Heaps
+
+66. **LC 743 — Network Delay Time**  
+    Medium | P0  
+    Focus: Dijkstra priority queue.
+
+67. **LC 1514 — Path with Maximum Probability**  
+    Medium | P0  
+    Focus: Max-heap path optimization.
+
+68. **LC 1631 — Path With Minimum Effort**  
+    Medium | P0  
+    Focus: Minimize maximum edge weight.
+
+69. **LC 778 — Swim in Rising Water**  
+    Hard | P0  
+    Focus: Minimax grid path.
+
+70. **LC 407 — Trapping Rain Water II**  
+    Hard | P0  
+    Focus: Boundary-first flood using the lowest active wall.
+
+71. **LC 1102 — Path With Maximum Minimum Value**  
+    Medium | P0 | Premium  
+    Focus: Maximum bottleneck path.
+
+72. **LC 1368 — Minimum Cost to Make at Least One Valid Path**  
+    Hard | P0  
+    Focus: 0-1 BFS versus Dijkstra.
+
+73. **LC 2290 — Minimum Obstacle Removal to Reach Corner**  
+    Hard | P0  
+    Focus: 0-1 BFS and heap alternatives.
+
+74. **LC 2662 — Minimum Cost of a Path With Special Roads**  
+    Medium | P1  
+    Focus: Dijkstra over compressed relevant points.
+
+---
+
+## Pattern 84: Heap-Based Sequence Generation
+
+75. **LC 264 — Ugly Number II**  
+    Medium | P0  
+    Focus: Generate values in sorted order without full enumeration.
+
+76. **LC 313 — Super Ugly Number**  
+    Medium | P1  
+    Focus: Multiple multiplicative streams.
+
+77. **LC 373 — Find K Pairs With Smallest Sums**  
+    Medium | P0  
+    Focus: Best-first pair generation.
+
+78. **LC 378 — Kth Smallest Element in Sorted Matrix**  
+    Medium | P0  
+    Focus: Sorted matrix frontier.
+
+79. **LC 786 — K-th Smallest Prime Fraction**  
+    Medium | P1  
+    Focus: Fraction frontier.
+
+80. **LC 1439 — Kth Smallest Sum of a Matrix**  
+    Hard | Stretch  
+    Focus: Partial sum generation.
+
+81. **LC 1801 — Number of Orders in the Backlog**  
+    Medium | P1  
+    Focus: Matching opposing heaps.
+
+82. **LC 1705 — Maximum Number of Eaten Apples**  
+    Medium | P1  
+    Focus: Earliest-expiring available item.
+
+---
+
+## Section 10 strict completion target
+
+- Solve **60–65 unique questions**.
+- Master all P0 problems.
+- Implement two-heap median and lazy deletion from memory.
+- Solve at least five scheduling problems using two heaps.
+- Compare heap, sorting, bucket, Quickselect and monotonic deque solutions.
+- Explain every heap key and tie-breaker before coding.
+
+---
+
+# Section 14: Advanced String Algorithms
+
+## Patterns covered
+
+136. Advanced String Algorithm Foundations  
+137. Prefix Function/KMP + Z-Algorithm  
+138. Rolling Hash  
+139. Manacher’s Algorithm  
+140. Trie-Based Advanced String Matching  
+141. Complex Advanced String Problems  
+
+---
+
+## Pattern 136: Advanced String Foundations
+
+1. **LC 28 — Find the Index of the First Occurrence in a String**  
+   Easy | P0  
+   Focus: Brute force, KMP and rolling hash comparison.
+
+2. **LC 459 — Repeated Substring Pattern**  
+   Easy | P0  
+   Focus: Prefix-function periodicity.
+
+3. **LC 686 — Repeated String Match**  
+   Medium | P1  
+   Focus: Bounded repetition plus pattern matching.
+
+4. **LC 796 — Rotate String**  
+   Easy | P1  
+   Focus: Rotation as substring search in `s + s`.
+
+5. **LC 1668 — Maximum Repeating Substring**  
+   Easy | P1  
+   Focus: Repeated pattern verification.
+
+6. **LC 1392 — Longest Happy Prefix**  
+   Hard | P0  
+   Focus: Longest proper prefix that is also a suffix.
+
+7. **LC 214 — Shortest Palindrome**  
+   Hard | P0  
+   Focus: Longest palindromic prefix through KMP or hashing.
+
+8. **LC 1316 — Distinct Echo Substrings**  
+   Hard | P1  
+   Focus: Repeated adjacent substrings and deduplication.
+
+9. **LC 1044 — Longest Duplicate Substring**  
+   Hard | P0  
+   Focus: Binary search with rolling hash.
+
+10. **LC 1923 — Longest Common Subpath**  
+    Hard | Stretch  
+    Focus: Binary search and intersection of path hashes.
+
+---
+
+## Pattern 137: KMP Prefix Function & Z-Algorithm
+
+11. **LC 28 — Find First Occurrence**  
+    Easy | P0  
+    Focus: Canonical KMP.
+
+12. **LC 459 — Repeated Substring Pattern**  
+    Easy | P0  
+    Focus: Period derived from prefix-function value.
+
+13. **LC 1392 — Longest Happy Prefix**  
+    Hard | P0  
+    Focus: Final prefix-function value.
+
+14. **LC 214 — Shortest Palindrome**  
+    Hard | P0  
+    Focus: Match string against its reverse.
+
+15. **LC 686 — Repeated String Match**  
+    Medium | P1  
+    Focus: Search across repeated text.
+
+16. **LC 3006 — Find Beautiful Indices in the Given Array I**  
+    Medium | P1  
+    Focus: Find occurrence positions of two patterns.
+
+17. **LC 3008 — Find Beautiful Indices in the Given Array II**  
+    Hard | P0  
+    Focus: Efficient pattern occurrence lists and distance matching.
+
+18. **LC 3031 — Minimum Time to Revert Word to Initial State II**  
+    Hard | P0  
+    Focus: Z-values and suffix-prefix equality.
+
+19. **LC 2223 — Sum of Scores of Built Strings**  
+    Hard | P0  
+    Focus: Sum of Z-array values.
+
+20. **LC 3303 — Find the Occurrence of First Almost Equal Substring**  
+    Hard | Stretch  
+    Focus: Forward and reverse matching information.
+
+### KMP mastery
+
+Implement from memory:
+
+- Prefix-function construction.
+- Pattern search using the prefix function.
+- Reset after mismatch.
+- Overlapping matches.
+- Combined `pattern + separator + text` construction.
+- Safe separator selection.
+
+### Z-algorithm mastery
+
+Understand:
+
+- `z[i]` is the longest prefix match beginning at `i`.
+- Reuse the current `[L, R]` matching segment.
+- Why each position extends the global boundary only a bounded number of times.
+- How to find pattern occurrences and prefix-suffix matches.
+
+---
+
+## Pattern 138: Rolling Hash
+
+21. **LC 187 — Repeated DNA Sequences**  
+    Medium | P0  
+    Focus: Fixed-size rolling hash.
+
+22. **LC 1044 — Longest Duplicate Substring**  
+    Hard | P0  
+    Focus: Binary search plus hash collision verification.
+
+23. **LC 1062 — Longest Repeating Substring**  
+    Medium | P1 | Premium  
+    Focus: Binary-search repeated substring detection.
+
+24. **LC 1147 — Longest Chunked Palindrome Decomposition**  
+    Hard | P1  
+    Focus: Symmetric rolling comparison.
+
+25. **LC 1316 — Distinct Echo Substrings**  
+    Hard | P1  
+    Focus: Substring equality queries.
+
+26. **LC 1923 — Longest Common Subpath**  
+    Hard | Stretch  
+    Focus: Hash-set intersection across paths.
+
+27. **LC 2156 — Find Substring With Given Hash Value**  
+    Hard | P0  
+    Focus: Reverse rolling window.
+
+28. **LC 2261 — K Divisible Elements Subarrays**  
+    Medium | P1  
+    Focus: Distinct-subarray hashing.
+
+29. **LC 1554 — Strings Differ by One Character**  
+    Medium | P1 | Premium  
+    Focus: Remove-position hashes.
+
+30. **LC 3327 — Check if DFS Strings Are Palindromes**  
+    Hard | Stretch  
+    Focus: Forward and reverse subtree-range hashes.
+
+### Rolling-hash safety
+
+For strict interviews, discuss:
+
+- Collision possibility.
+- Double hashing.
+- Verification after a hash match.
+- Modular multiplication overflow.
+- Prefix-hash normalization.
+- Character encoding.
+- Binary search monotonicity.
+
+Never claim hashing is deterministically collision-free unless the representation proves it.
+
+---
+
+## Pattern 139: Manacher’s Algorithm
+
+31. **LC 5 — Longest Palindromic Substring**  
+    Medium | P0 baseline  
+    Focus: Center expansion, DP and Manacher comparison.
+
+32. **LC 647 — Palindromic Substrings**  
+    Medium | P0 baseline  
+    Focus: Count via centers or palindrome radii.
+
+33. **LC 214 — Shortest Palindrome**  
+    Hard | P1  
+    Focus: Palindromic prefix.
+
+34. **LC 1960 — Maximum Product of the Length of Two Palindromic Substrings**  
+    Hard | Stretch  
+    Focus: Palindrome radii and non-overlapping prefix/suffix maxima.
+
+35. **LC 2472 — Maximum Number of Non-overlapping Palindrome Substrings**  
+    Hard | P1  
+    Focus: Palindrome detection plus DP.
+
+### Required Manacher knowledge
+
+Know:
+
+- Odd-length palindrome radius array.
+- Even-length palindrome radius array.
+- Transformed-string alternative.
+- Mirror reuse inside the active right boundary.
+- Conversion from transformed indices to original indices.
+
+Implementation fluency is useful, but center expansion and palindrome DP remain more important.
+
+---
+
+## Pattern 140: Trie-Based Advanced String Matching
+
+36. **LC 212 — Word Search II**  
+    Hard | P0  
+    Focus: Trie plus grid backtracking.
+
+37. **LC 336 — Palindrome Pairs**  
+    Hard | P0 / Stretch  
+    Focus: Reverse trie and remaining-palindrome metadata.
+
+38. **LC 425 — Word Squares**  
+    Hard | P0 | Premium  
+    Focus: Prefix-indexed candidate generation.
+
+39. **LC 472 — Concatenated Words**  
+    Hard | P0  
+    Focus: Trie-guided word segmentation.
+
+40. **LC 745 — Prefix and Suffix Search**  
+    Hard | P0  
+    Focus: Combined prefix-suffix keys.
+
+41. **LC 820 — Short Encoding of Words**  
+    Medium | P0  
+    Focus: Reverse trie.
+
+42. **LC 1032 — Stream of Characters**  
+    Hard | P0  
+    Focus: Match stream suffixes using reverse trie.
+
+43. **LC 1268 — Search Suggestions System**  
+    Medium | P0  
+    Focus: Ranked prefix retrieval.
+
+44. **LC 1804 — Implement Trie II**  
+    Medium | P0 | Premium  
+    Focus: Counts and erase.
+
+45. **LC 2416 — Sum of Prefix Scores of Strings**  
+    Hard | P0  
+    Focus: Prefix frequencies.
+
+46. **LC 3045 — Count Prefix and Suffix Pairs II**  
+    Hard | Stretch  
+    Focus: Paired-character trie.
+
+---
+
+## Pattern 141: Complex Advanced String Problems
+
+47. **LC 10 — Regular Expression Matching**  
+    Hard | P0  
+    Focus: Pattern DP.
+
+48. **LC 44 — Wildcard Matching**  
+    Hard | P0  
+    Focus: DP and greedy comparison.
+
+49. **LC 87 — Scramble String**  
+    Hard | P0  
+    Focus: Interval matching with swapped and unswapped splits.
+
+50. **LC 115 — Distinct Subsequences**  
+    Hard | P0  
+    Focus: Alignment counting.
+
+51. **LC 127 — Word Ladder**  
+    Hard | P0  
+    Focus: Transformation graph.
+
+52. **LC 126 — Word Ladder II**  
+    Hard | Stretch  
+    Focus: Shortest-path DAG and reconstruction.
+
+53. **LC 132 — Palindrome Partitioning II**  
+    Hard | P0  
+    Focus: Palindrome preprocessing plus cuts.
+
+54. **LC 301 — Remove Invalid Parentheses**  
+    Hard | P0 / Stretch  
+    Focus: Minimum-removal search.
+
+55. **LC 726 — Number of Atoms**  
+    Hard | Stretch  
+    Focus: Nested grammar parsing.
+
+56. **LC 828 — Count Unique Characters of All Substrings**  
+    Hard | P0  
+    Focus: Contribution based on surrounding occurrences.
+
+57. **LC 940 — Distinct Subsequences II**  
+    Hard | P0  
+    Focus: Duplicate correction.
+
+58. **LC 1397 — Find All Good Strings**  
+    Hard | Stretch  
+    Focus: Digit/lexicographic DP plus KMP automaton.
+
+59. **LC 2060 — Check if an Original String Exists Given Two Encoded Strings**  
+    Hard | Stretch  
+    Focus: Position pair plus decoded-length difference.
+
+60. **LC 2223 — Sum of Scores of Built Strings**  
+    Hard | P0  
+    Focus: Z-algorithm.
+
+---
+
+## Section 14 completion target
+
+- Solve **40–45 questions**.
+- Implement KMP and Z from memory.
+- Implement rolling hash with collision discussion.
+- Understand Manacher and implement it once or twice.
+- Master trie-assisted matching.
+- Complete at least ten hard composite string problems.
+
+---
+
+# Section 15: Math, Geometry & Randomization
+
+## Patterns covered
+
+142. Geometry Basics  
+143. Randomized Algorithms — Expected Analysis  
+144. Reservoir Sampling & Streaming Randomization  
+
+Math fundamentals are also included because geometry and randomization depend on exact arithmetic, normalization and probability.
+
+---
+
+## Math foundations
+
+1. **LC 9 — Palindrome Number**  
+   Easy | P1  
+   Focus: Numeric digit processing.
+
+2. **LC 50 — Pow(x, n)**  
+   Medium | P0  
+   Focus: Binary exponentiation.
+
+3. **LC 69 — Sqrt(x)**  
+   Easy | P0  
+   Focus: Integer root and overflow.
+
+4. **LC 172 — Factorial Trailing Zeroes**  
+   Medium | P0  
+   Focus: Count factors of five.
+
+5. **LC 202 — Happy Number**  
+   Easy | P1  
+   Focus: Repeated numeric transformation.
+
+6. **LC 204 — Count Primes**  
+   Medium | P0  
+   Focus: Sieve of Eratosthenes.
+
+7. **LC 263 — Ugly Number**  
+   Easy | P1  
+   Focus: Prime-factor restriction.
+
+8. **LC 264 — Ugly Number II**  
+   Medium | P0  
+   Focus: Multi-pointer sequence generation.
+
+9. **LC 365 — Water and Jug Problem**  
+   Medium | P0  
+   Focus: Bézout’s identity and GCD.
+
+10. **LC 372 — Super Pow**  
+    Medium | P1  
+    Focus: Modular exponentiation.
+
+11. **LC 400 — Nth Digit**  
+    Medium | P1  
+    Focus: Group numbers by digit length.
+
+12. **LC 1015 — Smallest Integer Divisible by K**  
+    Medium | P0  
+    Focus: Remainder-state pigeonhole principle.
+
+13. **LC 1071 — Greatest Common Divisor of Strings**  
+    Easy | P0  
+    Focus: Structural GCD.
+
+14. **LC 1497 — Check If Array Pairs Are Divisible by K**  
+    Medium | P0  
+    Focus: Complementary remainder counts.
+
+15. **LC 1819 — Number of Different Subsequences GCDs**  
+    Hard | Stretch  
+    Focus: Multiples enumeration and incremental GCD.
+
+16. **LC 2183 — Count Array Pairs Divisible by K**  
+    Hard | P0  
+    Focus: GCD classification.
+
+17. **LC 2523 — Closest Prime Numbers in Range**  
+    Medium | P1  
+    Focus: Sieve over a bounded range.
+
+---
+
+## Pattern 142: Geometry Basics
+
+### Points, slopes and collinearity
+
+18. **LC 149 — Max Points on a Line**  
+    Hard | P0  
+    Focus: Normalize slope using GCD.
+
+19. **LC 356 — Line Reflection**  
+    Medium | P0 | Premium  
+    Focus: Reflection axis and point-set membership.
+
+20. **LC 1232 — Check If It Is a Straight Line**  
+    Easy | P0  
+    Focus: Cross multiplication, not floating-point slope.
+
+21. **LC 2280 — Minimum Lines to Represent a Line Chart**  
+    Medium | P0  
+    Focus: Compare consecutive slopes exactly.
+
+22. **LC 1037 — Valid Boomerang**  
+    Easy | P1  
+    Focus: Nonzero cross product.
+
+23. **LC 447 — Number of Boomerangs**  
+    Medium | P0  
+    Focus: Squared-distance frequencies around each center.
+
+24. **LC 939 — Minimum Area Rectangle**  
+    Medium | P0  
+    Focus: Diagonal or column-pair hashing.
+
+25. **LC 963 — Minimum Area Rectangle II**  
+    Medium | Stretch  
+    Focus: Diagonal midpoint and equal length.
+
+### Orientation, hull and polygons
+
+26. **LC 587 — Erect the Fence**  
+    Hard | P0  
+    Focus: Convex hull using monotonic chain.
+
+27. **LC 469 — Convex Polygon**  
+    Medium | P1 | Premium  
+    Focus: Consistent orientation.
+
+28. **LC 836 — Rectangle Overlap**  
+    Easy | P0  
+    Focus: Strict projection overlap.
+
+29. **LC 223 — Rectangle Area**  
+    Medium | P0  
+    Focus: Inclusion-exclusion.
+
+30. **LC 850 — Rectangle Area II**  
+    Hard | Stretch  
+    Focus: Sweep line plus covered interval length.
+
+31. **LC 812 — Largest Triangle Area**  
+    Easy | P1  
+    Focus: Cross-product area.
+
+32. **LC 593 — Valid Square**  
+    Medium | P0  
+    Focus: Six squared distances.
+
+33. **LC 1401 — Circle and Rectangle Overlapping**  
+    Medium | P1  
+    Focus: Closest point in rectangle.
+
+### Geometric simulation
+
+34. **LC 54 — Spiral Matrix**  
+    Medium | P1  
+    Focus: Boundary geometry.
+
+35. **LC 885 — Spiral Matrix III**  
+    Medium | P1  
+    Focus: Expanding movement lengths.
+
+36. **LC 1041 — Robot Bounded In Circle**  
+    Medium | P0  
+    Focus: Final position and orientation.
+
+37. **LC 1266 — Minimum Time Visiting All Points**  
+    Easy | P0  
+    Focus: Chebyshev distance.
+
+38. **LC 1515 — Best Position for a Service Centre**  
+    Hard | Stretch  
+    Focus: Numerical optimization.
+
+### Geometry safety requirements
+
+- Prefer squared distance over square roots.
+- Use cross products for orientation.
+- Normalize slopes by GCD.
+- Normalize the sign of slope pairs.
+- Treat vertical and horizontal lines consistently.
+- Use wide integer types for coordinate products.
+- Avoid floating-point equality.
+
+---
+
+## Pattern 143: Randomized Algorithms
+
+39. **LC 384 — Shuffle an Array**  
+    Medium | P0  
+    Focus: Fisher-Yates shuffle.
+
+40. **LC 528 — Random Pick with Weight**  
+    Medium | P0  
+    Focus: Prefix weights plus binary search.
+
+41. **LC 497 — Random Point in Non-overlapping Rectangles**  
+    Medium | P0  
+    Focus: Weight by number of integer points.
+
+42. **LC 478 — Generate Random Point in a Circle**  
+    Medium | P1  
+    Focus: Rejection sampling or correct radial distribution.
+
+43. **LC 470 — Implement Rand10() Using Rand7()**  
+    Medium | P0  
+    Focus: Rejection sampling and unbiased mapping.
+
+44. **LC 519 — Random Flip Matrix**  
+    Medium | P0  
+    Focus: Virtual Fisher-Yates with sparse remapping.
+
+45. **LC 710 — Random Pick with Blacklist**  
+    Hard | P0  
+    Focus: Map blacklisted low-range values to allowed high-range values.
+
+46. **LC 398 — Random Pick Index**  
+    Medium | P0  
+    Focus: Reservoir sampling.
+
+47. **LC 382 — Linked List Random Node**  
+    Medium | P0  
+    Focus: Reservoir sampling on unknown-length input.
+
+48. **LC 380 — Insert Delete GetRandom O(1)**  
+    Medium | P0  
+    Focus: Array plus index map.
+
+49. **LC 381 — Insert Delete GetRandom O(1) — Duplicates Allowed**  
+    Hard | P0  
+    Focus: Value-to-index-set maintenance.
+
+### Randomness proof requirements
+
+Be able to prove:
+
+- Fisher-Yates gives every permutation probability `1/n!`.
+- Weighted random pick chooses item `i` with probability proportional to its weight.
+- Reservoir sampling retains each of `n` items with probability `1/n`.
+- Rejection sampling remains uniform.
+- Modulo reduction can introduce bias.
+- Random pivot Quickselect has expected linear time but quadratic worst case.
+
+---
+
+## Pattern 144: Reservoir Sampling
+
+50. **LC 382 — Linked List Random Node**  
+    Medium | P0  
+    Focus: Select one item from a stream.
+
+51. **LC 398 — Random Pick Index**  
+    Medium | P0  
+    Focus: Uniform choice among unknown matching occurrences.
+
+52. **LC 470 — Rand10 Using Rand7**  
+    Medium | P0  
+    Focus: Recycle or reject excess random states.
+
+53. **LC 497 — Random Point in Rectangles**  
+    Medium | P0  
+    Focus: Weighted object selection followed by uniform local selection.
+
+54. **LC 528 — Random Pick with Weight**  
+    Medium | P0  
+    Focus: Static weighted distribution.
+
+55. **LC  reservoir-size-k implementation practice**  
+    Conceptual | P1  
+    Focus: Retain `k` samples from an unknown-length stream.
+
+---
+
+## Section 15 completion target
+
+- Solve **40–45 questions**.
+- Master exact orientation and distance arithmetic.
+- Implement monotonic-chain convex hull.
+- Implement Fisher-Yates.
+- Prove reservoir sampling.
+- Explain rejection sampling and modulo bias.
+- Complete LC 149, 587, 384, 470, 528 and 710 from memory.
+
+---
+
+# Section 16: Flow & Matching
+
+## Patterns covered
+
+145. Bipartite Matching Foundations  
+146. Network Flow Foundations  
+147. Dinic’s Algorithm  
+148. Minimum-Cut Modeling  
+
+This section is formally conceptual in your sheet, but strict preparation should include at least one working matching implementation and conceptual flow modeling.
+
+---
+
+## Pattern 145: Bipartite Matching Foundations
+
+1. **LC 1820 — Maximum Number of Accepted Invitations**  
+   Medium | P0 | Premium  
+   Focus: DFS augmenting paths.
+
+2. **LC 1066 — Campus Bikes II**  
+   Medium | P1 | Premium  
+   Focus: Assignment through bitmask DP; compare with matching.
+
+3. **LC 1947 — Maximum Compatibility Score Sum**  
+   Medium | P1  
+   Focus: Weighted assignment with permutation or bitmask DP.
+
+4. **LC 1349 — Maximum Students Taking Exam**  
+   Hard | Stretch  
+   Focus: Conflict graph, matching, or profile DP.
+
+5. **LC 2123 — Minimum Operations to Remove Adjacent Ones in Matrix**  
+   Hard | P1 | Premium  
+   Focus: Bipartite matching and minimum vertex cover.
+
+6. **LC 1595 — Minimum Cost to Connect Two Groups of Points**  
+   Hard | Stretch  
+   Focus: Weighted coverage assignment through bitmask DP.
+
+7. **LC 2172 — Maximum AND Sum of Array**  
+   Hard | P1  
+   Focus: Capacity-constrained assignment.
+
+8. **LC 1879 — Minimum XOR Sum of Two Arrays**  
+   Hard | P0  
+   Focus: Minimum-cost perfect assignment using bitmask DP.
+
+9. **LC 1681 — Minimum Incompatibility**  
+   Hard | Stretch  
+   Focus: Partition and assignment constraints.
+
+### Matching fundamentals
+
+Know:
+
+- Left and right vertex partitions.
+- Matching edge meaning.
+- Augmenting paths.
+- Why flipping an augmenting path increases matching size by one.
+- Complexity of simple DFS matching.
+- Why Hopcroft-Karp is faster but outside the required sheet.
+- Hall’s theorem at a recognition level.
+
+---
+
+## Pattern 146: Network Flow Foundations
+
+10. **LC  maximum bipartite matching through source and sink**  
+    Conceptual | P0  
+    Model:
+    - Source to each left node with capacity one.
+    - Left-to-right compatibility edges with capacity one.
+    - Each right node to sink with capacity one.
+
+11. **LC 924/928-style separation modeling**  
+    Conceptual | P1  
+    Focus: Connectivity impact, while recognizing when flow is unnecessary.
+
+12. **LC  distribute-demand variants**  
+    Conceptual | P1  
+    Focus: Capacitated assignment.
+
+### Required flow concepts
+
+Understand:
+
+- Capacity.
+- Flow.
+- Residual capacity.
+- Reverse residual edges.
+- Augmenting path.
+- Flow conservation.
+- Maximum flow.
+- Minimum cut.
+- Integrality for integer capacities.
+
+---
+
+## Pattern 147: Dinic’s Algorithm
+
+13. **Implement Dinic on a generic small graph**  
+    Conceptual + implementation | P1  
+    Focus:
+    - Residual graph.
+    - BFS level graph.
+    - DFS blocking flow.
+    - Current-edge pointer optimization.
+
+14. **Model bipartite matching with Dinic**  
+    P1  
+    Focus: Verify matching and flow equivalence.
+
+15. **Model vertex capacity by splitting nodes**  
+    P2  
+    Focus: `v_in -> v_out` edge with the vertex capacity.
+
+### Dinic knowledge standard
+
+You should be able to explain:
+
+1. BFS creates a layered residual graph.
+2. DFS sends flow only to the next level.
+3. A blocking flow saturates every source-to-sink path in that level graph.
+4. The process repeats until the sink becomes unreachable.
+5. Reverse edges allow previous decisions to be corrected.
+
+Full optimized Dinic memorization is lower priority than Dijkstra, DSU, topological sort and MST.
+
+---
+
+## Pattern 148: Minimum-Cut Modeling
+
+16. **Minimum vertex cover in bipartite graphs**  
+    Conceptual | P1  
+    Focus: Kőnig’s theorem.
+
+17. **Select-or-penalize binary labeling model**  
+    Conceptual | P1  
+    Focus: Source side versus sink side decision.
+
+18. **Node splitting for vertex removal cost**  
+    Conceptual | P1  
+    Focus: Turn vertex cost into edge capacity.
+
+19. **Grid separation models**  
+    Conceptual | P2  
+    Focus: Cells as vertices and adjacency as high-capacity edges.
+
+20. **Project selection / maximum closure model**  
+    Conceptual | Stretch  
+    Focus: Benefits from source, penalties to sink, dependencies as infinite-capacity edges.
+
+---
+
+## Section 16 completion target
+
+- Solve three to five matching or assignment problems.
+- Implement DFS augmenting-path matching.
+- Implement Dinic once.
+- Model a matching problem as max flow.
+- Explain node splitting.
+- Explain max-flow/min-cut duality.
+- Do not prioritize flow above mainstream graph and DP mastery.
+
+---
+
+# Section 17: Composite Data Structure Design
+
+## Patterns covered
+
+149. Composite Data Structure Design Foundations  
+150. Hash Table Internals  
+151. Stack & Queue Composition  
+152. Iterator Design  
+153. Streaming Counters  
+154. Key-Value Versioning  
+155. Encoding & Serialization  
+156. Linked Structures & Navigation  
+157. Trie-Based Systems  
+158. Ordered Sets & Interval Systems  
+159. Ranking & Category Systems  
+160. Social & Activity Feeds  
+161. Hierarchical File Systems  
+162. Mutable Graph APIs  
+163. Final Composite Design Problems  
+
+---
+
+## Pattern 149: Composite Design Foundations
+
+1. **LC 146 — LRU Cache**  
+   Medium | P0  
+   Focus: Hash map plus doubly linked list.
+
+2. **LC 460 — LFU Cache**  
+   Hard | P0  
+   Focus: Key map, frequency buckets and recency within frequency.
+
+3. **LC 380 — Insert Delete GetRandom O(1)**  
+   Medium | P0  
+   Focus: Dynamic array plus index map.
+
+4. **LC 381 — Randomized Collection with Duplicates**  
+   Hard | P0  
+   Focus: Index sets and swap-delete.
+
+5. **LC 432 — All O`one Data Structure**  
+   Hard | P0 / Stretch  
+   Focus: Doubly linked count buckets.
+
+6. **LC 895 — Maximum Frequency Stack**  
+   Hard | P0  
+   Focus: Frequency-to-stack composition.
+
+7. **LC 1206 — Design Skiplist**  
+   Hard | P1  
+   Focus: Randomized layered ordered structure.
+
+8. **LC 622 — Design Circular Queue**  
+   Medium | P0  
+   Focus: Circular indexing.
+
+9. **LC 641 — Design Circular Deque**  
+   Medium | P0  
+   Focus: Double-ended circular operations.
+
+10. **LC 707 — Design Linked List**  
+    Medium | P1  
+    Focus: Sentinels and size invariants.
+
+---
+
+## Pattern 150: Hash Table Internals
+
+11. **LC 705 — Design HashSet**  
+    Easy | P0  
+    Focus: Buckets, separate chaining and resizing discussion.
+
+12. **LC 706 — Design HashMap**  
+    Easy | P0  
+    Focus: Key-value buckets and collision handling.
+
+13. **LC 380 — Randomized Set**  
+    Medium | P0  
+    Focus: Hash indexing plus compact storage.
+
+14. **LC 381 — Randomized Collection**  
+    Hard | P0  
+    Focus: Duplicate index maintenance.
+
+15. **LC 1366-style frequency ranking variants**  
+    Optional  
+    Focus: Composite keys and deterministic tie-breaking.
+
+### Hash-table discussion requirements
+
+Explain:
+
+- Hash function.
+- Bucket index.
+- Separate chaining.
+- Open addressing concept.
+- Load factor.
+- Resizing.
+- Expected versus worst-case complexity.
+- Mutable-key hazards.
+- Collision attacks conceptually.
+
+---
+
+## Pattern 151: Stack & Queue Composition
+
+16. **LC 155 — Min Stack**  
+    Medium | P0  
+    Focus: Main stack plus minimum state.
+
+17. **LC 225 — Implement Stack Using Queues**  
+    Easy | P0  
+    Focus: Queue rotation.
+
+18. **LC 232 — Implement Queue Using Stacks**  
+    Easy | P0  
+    Focus: Amortized transfer.
+
+19. **LC 716 — Max Stack**  
+    Hard | P1 | Premium  
+    Focus: Stack plus ordered structure.
+
+20. **LC 1670 — Design Front Middle Back Queue**  
+    Medium | P0  
+    Focus: Two balanced deques.
+
+21. **LC 900 — RLE Iterator**  
+    Medium | P1  
+    Focus: Stateful sequence consumption.
+
+22. **LC 622 — Circular Queue**  
+    Medium | P0  
+    Focus: Full versus empty representation.
+
+23. **LC 641 — Circular Deque**  
+    Medium | P0  
+    Focus: Front and rear wraparound.
+
+---
+
+## Pattern 152: Iterator Design
+
+24. **LC 173 — Binary Search Tree Iterator**  
+    Medium | P0  
+    Focus: Lazy inorder traversal.
+
+25. **LC 284 — Peeking Iterator**  
+    Medium | P0  
+    Focus: One-element lookahead.
+
+26. **LC 341 — Flatten Nested List Iterator**  
+    Medium | P0  
+    Focus: Lazy stack expansion.
+
+27. **LC 251 — Flatten 2D Vector**  
+    Medium | P1 | Premium  
+    Focus: Skip empty vectors.
+
+28. **LC 281 — Zigzag Iterator**  
+    Medium | P1 | Premium  
+    Focus: Round-robin active iterators.
+
+29. **LC 604 — Design Compressed String Iterator**  
+    Easy | P1 | Premium  
+    Focus: Parse and consume counted runs.
+
+30. **LC 900 — RLE Iterator**  
+    Medium | P1  
+    Focus: Batched consumption.
+
+31. **LC 1286 — Iterator for Combination**  
+    Medium | P1  
+    Focus: Precompute versus generate next lexicographic combination.
+
+32. **LC 1586 — BST Iterator II**  
+    Medium | P1 | Premium  
+    Focus: History plus lazy forward traversal.
+
+### Iterator standards
+
+- `hasNext()` should not unexpectedly consume input unless documented.
+- Prefer lazy traversal when output can be large.
+- Preserve amortized complexity.
+- Handle repeated `hasNext()` calls.
+- Define exhaustion behavior.
+- Avoid recursively materializing the full structure.
+
+---
+
+## Pattern 153: Streaming Counters
+
+33. **LC 295 — Median Finder**  
+    Hard | P0  
+    Focus: Streaming order statistics.
+
+34. **LC 346 — Moving Average from Data Stream**  
+    Easy | P0 | Premium  
+    Focus: Fixed-window queue and running total.
+
+35. **LC 362 — Design Hit Counter**  
+    Medium | P0 | Premium  
+    Focus: Timestamp buckets or event queue.
+
+36. **LC 933 — Number of Recent Calls**  
+    Easy | P0  
+    Focus: Evict expired timestamps.
+
+37. **LC 981 — TimeMap**  
+    Medium | P0  
+    Focus: Versioned histories.
+
+38. **LC 1146 — Snapshot Array**  
+    Medium | P0  
+    Focus: Sparse per-index version history.
+
+39. **LC 2034 — Stock Price Fluctuation**  
+    Medium | P0  
+    Focus: Correcting historical values.
+
+40. **LC 1825 — MKAverage**  
+    Hard | Stretch  
+    Focus: Streaming trimmed mean.
+
+41. **LC 2526 — Find Consecutive Integers from a Data Stream**  
+    Medium | P1  
+    Focus: Consecutive-state counter.
+
+42. **LC 1352 — Product of the Last K Numbers**  
+    Medium | P0  
+    Focus: Prefix products reset by zeros.
+
+---
+
+## Pattern 154: Key-Value Versioning
+
+43. **LC 981 — Time Based Key-Value Store**  
+    Medium | P0  
+    Focus: Per-key sorted versions.
+
+44. **LC 1146 — Snapshot Array**  
+    Medium | P0  
+    Focus: Immutable version boundaries.
+
+45. **LC 2034 — Stock Price Fluctuation**  
+    Medium | P0  
+    Focus: Mutable values at previous timestamps.
+
+46. **LC 1172 — Dinner Plate Stacks**  
+    Hard | P0  
+    Focus: Indexed resource availability with lazy heaps.
+
+47. **LC 2296 — Design a Text Editor**  
+    Hard | P0  
+    Focus: Cursor-local mutable state.
+
+48. **LC  design browser history: 1472 — Design Browser History**  
+    Medium | P0  
+    Focus: Version-like navigation and truncating future history.
+
+### Versioning design questions
+
+- Are timestamps guaranteed to be increasing?
+- Can historical entries be corrected?
+- Are snapshots global or per key?
+- Is persistence full or partial?
+- Can unchanged values share storage?
+- Which operation must be optimized?
+
+---
+
+## Pattern 155: Encoding & Serialization
+
+49. **LC 271 — Encode and Decode Strings**  
+    Medium | P0 | Premium  
+    Focus: Length-prefixed encoding.
+
+50. **LC 297 — Serialize and Deserialize Binary Tree**  
+    Hard | P0  
+    Focus: Preserve null structure.
+
+51. **LC 449 — Serialize and Deserialize BST**  
+    Medium | P0  
+    Focus: Compact encoding using ordering.
+
+52. **LC 428 — Serialize and Deserialize N-ary Tree**  
+    Hard | P1 | Premium  
+    Focus: Encode child counts.
+
+53. **LC 431 — Encode N-ary Tree to Binary Tree**  
+    Hard | Stretch | Premium  
+    Focus: Left-child/right-sibling transformation.
+
+54. **LC 535 — Encode and Decode TinyURL**  
+    Medium | P0  
+    Focus: ID generation, collision handling and lookup.
+
+55. **LC 652 — Find Duplicate Subtrees**  
+    Medium | P0  
+    Focus: Canonical subtree identities.
+
+### Encoding standards
+
+Support:
+
+- Empty values.
+- Delimiter characters inside data.
+- Unicode if relevant.
+- Negative and multi-digit values.
+- Duplicate values.
+- Deterministic decoding.
+- Corrupt or incomplete input discussion.
+
+---
+
+## Pattern 156: Linked Structures & Navigation
+
+56. **LC 146 — LRU Cache**  
+    Medium | P0  
+    Focus: Constant-time promotion and eviction.
+
+57. **LC 460 — LFU Cache**  
+    Hard | P0  
+    Focus: Frequency bucket navigation.
+
+58. **LC 432 — All O`one Data Structure**  
+    Hard | Stretch  
+    Focus: Ordered bucket movement.
+
+59. **LC 430 — Flatten a Multilevel Doubly Linked List**  
+    Medium | P0  
+    Focus: Preserve child and next relationships.
+
+60. **LC 1472 — Browser History**  
+    Medium | P0  
+    Focus: Back/forward navigation.
+
+61. **LC 2296 — Design a Text Editor**  
+    Hard | P0  
+    Focus: Cursor movement and local edits.
+
+62. **LC 707 — Design Linked List**  
+    Medium | P1  
+    Focus: Sentinel nodes.
+
+---
+
+## Pattern 157: Trie-Based Systems
+
+63. **LC 208 — Implement Trie**  
+    Medium | P0
+
+64. **LC 211 — Add and Search Word**  
+    Medium | P0
+
+65. **LC 588 — Design In-Memory File System**  
+    Hard | P0 | Premium
+
+66. **LC 642 — Design Search Autocomplete System**  
+    Hard | P0 | Premium
+
+67. **LC 677 — Map Sum Pairs**  
+    Medium | P0
+
+68. **LC 745 — Prefix and Suffix Search**  
+    Hard | P0
+
+69. **LC 1032 — Stream of Characters**  
+    Hard | P0
+
+70. **LC 1166 — Design File System**  
+    Medium | P1 | Premium
+
+71. **LC 1268 — Search Suggestions System**  
+    Medium | P0
+
+72. **LC 1804 — Implement Trie II**  
+    Medium | P0 | Premium
+
+---
+
+## Pattern 158: Ordered Sets & Interval Systems
+
+73. **LC 729 — My Calendar I**  
+    Medium | P0
+
+74. **LC 731 — My Calendar II**  
+    Medium | P0
+
+75. **LC 732 — My Calendar III**  
+    Hard | P0
+
+76. **LC 352 — Data Stream as Disjoint Intervals**  
+    Hard | P0
+
+77. **LC 715 — Range Module**  
+    Hard | P0 / Stretch
+
+78. **LC 855 — Exam Room**  
+    Medium | P0
+
+79. **LC 1146 — Snapshot Array**  
+    Medium | P1
+
+80. **LC 1845 — Seat Reservation Manager**  
+    Medium | P1
+
+81. **LC 2276 — Count Integers in Intervals**  
+    Hard | Stretch
+
+82. **LC 2349 — Number Container System**  
+    Medium | P1
+
+---
+
+## Pattern 159: Ranking & Category Systems
+
+83. **LC 2353 — Design a Food Rating System**  
+    Medium | P0
+
+84. **LC 2102 — Sequentially Ordinal Rank Tracker**  
+    Hard | P0
+
+85. **LC 1244 — Design a Leaderboard**  
+    Medium | P1 | Premium
+
+86. **LC 1348 — Tweet Counts Per Frequency**  
+    Medium | P1
+
+87. **LC 895 — Maximum Frequency Stack**  
+    Hard | P0
+
+88. **LC 432 — All O`one Data Structure**  
+    Hard | P0
+
+89. **LC 2034 — Stock Price Fluctuation**  
+    Medium | P0
+
+90. **LC  design category rankings with mutable scores**  
+    Practice extension  
+    Focus: Ordered set, lazy heap or bucket selection.
+
+---
+
+## Pattern 160: Social & Activity Feeds
+
+91. **LC 355 — Design Twitter**  
+    Medium | P0  
+    Focus: Per-user streams and K-way feed merge.
+
+92. **LC 1348 — Tweet Counts Per Frequency**  
+    Medium | P1  
+    Focus: Time-bucket aggregation.
+
+93. **LC 1603 — Design Parking System**  
+    Easy | P2  
+    Focus: Capacity counters.
+
+94. **LC 1756 — Design Most Recently Used Queue**  
+    Medium | P1 | Premium  
+    Focus: Ordered access and repositioning.
+
+95. **LC  design notification feed extension**  
+    Practice  
+    Focus: Fan-out, pagination, ranking, deduplication and unread state.
+
+For DSA interviews, implement the in-memory version. You do not need distributed-system scale unless explicitly requested.
+
+---
+
+## Pattern 161: Hierarchical File Systems
+
+96. **LC 588 — Design In-Memory File System**  
+    Hard | P0 | Premium
+
+97. **LC 1166 — Design File System**  
+    Medium | P0 | Premium
+
+98. **LC 1233 — Remove Sub-Folders from Filesystem**  
+    Medium | P0
+
+99. **LC 1948 — Delete Duplicate Folders**  
+    Hard | Stretch
+
+100. **LC 609 — Find Duplicate File in System**  
+     Medium | P1
+
+101. **LC 71 — Simplify Path**  
+     Medium | P0
+
+102. **LC 652 — Find Duplicate Subtrees**  
+     Medium | P1  
+     Focus: Shared canonicalization concept.
+
+---
+
+## Pattern 162: Mutable Graph APIs
+
+103. **LC 2642 — Design Graph With Shortest Path Calculator**  
+     Hard | P0
+
+104. **LC 1797 — Design Authentication Manager**  
+     Medium | P1  
+     Focus: Mutable expiry events.
+
+105. **LC 1483 — Kth Ancestor of a Tree Node**  
+     Hard | P1  
+     Focus: Static query API through binary lifting.
+
+106. **LC 1261 — Find Elements in a Contaminated Binary Tree**  
+     Medium | P1  
+     Focus: Recovery plus lookup API.
+
+107. **LC  design mutable directed graph extension**  
+     Practice  
+     Required operations:
+     - Add node.
+     - Add edge.
+     - Remove edge.
+     - Test reachability.
+     - Return shortest path.
+
+108. **LC  design dynamic connectivity extension**  
+     Practice  
+     Focus: Explain why deletions are difficult for ordinary DSU.
+
+---
+
+## Pattern 163: Final Composite Design Problems
+
+109. **LC 146 — LRU Cache**
+110. **LC 460 — LFU Cache**
+111. **LC 432 — All O`one**
+112. **LC 355 — Design Twitter**
+113. **LC 588 — In-Memory File System**
+114. **LC 642 — Autocomplete System**
+115. **LC 715 — Range Module**
+116. **LC 732 — My Calendar III**
+117. **LC 895 — Frequency Stack**
+118. **LC 1172 — Dinner Plate Stacks**
+119. **LC 1206 — Skiplist**
+120. **LC 1825 — MKAverage**
+121. **LC 2034 — Stock Price Fluctuation**
+122. **LC 2102 — SOR Tracker**
+123. **LC 2296 — Text Editor**
+124. **LC 2353 — Food Ratings**
+125. **LC 2642 — Design Graph**
+
+### Composite-design interview checklist
+
+For every operation, state:
+
+- Functional behavior.
+- Required complexity.
+- Primary data structure.
+- Secondary index.
+- Source of truth.
+- Synchronization between structures.
+- Stale-entry strategy.
+- Empty-state behavior.
+- Tie-breaking.
+- Memory complexity.
+- Amortized versus worst-case complexity.
+
+---
+
+## Section 17 completion target
+
+- Solve **75–85 unique design questions and supporting problems**.
+- Implement LRU, LFU, Median Finder, TimeMap, Trie, Range Module and Twitter.
+- Explain every maintained invariant.
+- Practice API extensions after completing the original problem.
+- Discuss stale records, deletion, correction and tie-breaking.
+
+---
+
+# Section 18: Additional Advanced Patterns
+
+## Patterns covered
+
+164. Coordinate Compression  
+165. Meet-in-the-Middle  
+166. Eulerian Paths, Circuits & Edge-Consumption Traversal  
+167. Strongly Connected Components  
+168. Fenwick Tree / Binary Indexed Tree  
+169. Sparse Table & Static Idempotent Queries  
+170. Rerooting Dynamic Programming  
+171. Binary Lifting & Lowest Common Ancestor  
+172. Subset-Sum Bitset Optimization  
+173. State-Machine Dynamic Programming  
+
+---
+
+## Pattern 164: Coordinate Compression
+
+1. **LC 315 — Count of Smaller Numbers After Self**  
+   Hard | P0  
+   Focus: Compress values before Fenwick queries.
+
+2. **LC 327 — Count of Range Sum**  
+   Hard | P0  
+   Focus: Compress prefix sums and transformed targets.
+
+3. **LC 493 — Reverse Pairs**  
+   Hard | P0  
+   Focus: Ordered counting over large values.
+
+4. **LC 1649 — Create Sorted Array through Instructions**  
+   Hard | P0  
+   Focus: Fenwick counts over compressed ranks.
+
+5. **LC 2179 — Count Good Triplets in an Array**  
+   Hard | P0  
+   Focus: Map one permutation into the ordering of another.
+
+6. **LC 2251 — Number of Flowers in Full Bloom**  
+   Hard | P1  
+   Focus: Offline sorting or compressed sweep.
+
+7. **LC 1851 — Minimum Interval to Include Each Query**  
+   Hard | P0  
+   Focus: Offline query ordering.
+
+8. **LC 850 — Rectangle Area II**  
+   Hard | Stretch  
+   Focus: Coordinate-compressed coverage.
+
+### Compression rules
+
+- Sort unique values.
+- Map each value to a dense rank.
+- Preserve ordering, not numeric distance.
+- Include transformed values needed by queries.
+- Use one-based ranks for Fenwick trees.
+
+---
+
+## Pattern 165: Meet-in-the-Middle
+
+9. **LC 1755 — Closest Subsequence Sum**  
+   Hard | P0
+
+10. **LC 2035 — Partition Array Into Two Arrays to Minimize Sum Difference**  
+    Hard | P0
+
+11. **LC 805 — Split Array With Same Average**  
+    Hard | Stretch
+
+12. **LC 956 — Tallest Billboard**  
+    Hard | P1  
+    Focus: Compare MITM, difference DP and hash-state compression.
+
+13. **LC 1774 — Closest Dessert Cost**  
+    Medium | P1
+
+14. **LC 1498-style subset-pair counting variants**  
+    Practice  
+    Focus: Generate half-results, sort one half and binary search matches.
+
+### MITM recognition
+
+Use it when:
+
+- `n` is too large for `2^n`.
+- `n` is small enough for `2^(n/2)`.
+- Values are too large for value-based DP.
+- The objective combines two independent subset halves.
+
+---
+
+## Pattern 166: Eulerian Paths & Circuits
+
+15. **LC 332 — Reconstruct Itinerary**  
+    Hard | P0  
+    Focus: Lexicographically ordered Eulerian trail.
+
+16. **LC 2097 — Valid Arrangement of Pairs**  
+    Hard | P0  
+    Focus: Directed Eulerian path and start-node degree.
+
+17. **LC 753 — Cracking the Safe**  
+    Hard | Stretch  
+    Focus: Eulerian cycle in a De Bruijn graph.
+
+18. **LC  Eulerian edge-consumption implementation practice**  
+    P0  
+    Focus: Hierholzer’s algorithm for directed and undirected graphs.
+
+### Eulerian conditions
+
+For a directed Eulerian path:
+
+- At most one node has `outdegree = indegree + 1`.
+- At most one node has `indegree = outdegree + 1`.
+- Every other active node has equal indegree and outdegree.
+- Active edges belong to one connected component in the appropriate underlying sense.
+
+The path is constructed during backtracking after all outgoing edges are consumed.
+
+---
+
+## Pattern 167: Strongly Connected Components
+
+19. **LC 2360 — Longest Cycle in a Graph**  
+    Hard | P1  
+    Focus: Functional graph special case.
+
+20. **LC 802 — Find Eventual Safe States**  
+    Medium | P1  
+    Focus: SCC interpretation or reverse topological elimination.
+
+21. **LC 1557 — Minimum Number of Vertices to Reach All Nodes**  
+    Medium | P1  
+    Focus: DAG version; understand SCC condensation generalization.
+
+22. **LC 1568 — Minimum Days to Disconnect Island**  
+    Hard | Stretch  
+    Focus: Related low-link reasoning.
+
+23. **LC 1192 — Critical Connections**  
+    Hard | P0  
+    Focus: Tarjan low-link foundations, though this is bridges rather than SCC.
+
+24. **Implement Kosaraju’s algorithm**  
+    P0 concept  
+    Steps:
+    - DFS finishing order.
+    - Reverse graph.
+    - DFS in reverse finishing order.
+
+25. **Implement Tarjan’s SCC algorithm**  
+    P1  
+    Focus:
+    - Discovery index.
+    - Low-link value.
+    - Active recursion stack.
+    - SCC root condition.
+
+### SCC use cases
+
+- Collapse cycles into single components.
+- Build a condensation DAG.
+- Find source SCCs.
+- Analyze mutual reachability.
+- Process cyclic dependencies as acyclic component groups.
+
+---
+
+## Pattern 168: Fenwick Tree
+
+26. **LC 307 — Range Sum Query Mutable**  
+    Medium | P0
+
+27. **LC 315 — Count Smaller After Self**  
+    Hard | P0
+
+28. **LC 327 — Count of Range Sum**  
+    Hard | P0
+
+29. **LC 493 — Reverse Pairs**  
+    Hard | P0
+
+30. **LC 1649 — Create Sorted Array through Instructions**  
+    Hard | P0
+
+31. **LC 2179 — Count Good Triplets**  
+    Hard | P0
+
+32. **LC 2426 — Number of Pairs Satisfying Inequality**  
+    Hard | P0
+
+33. **LC 1395 — Count Number of Teams**  
+    Medium | P1
+
+34. **LC 1505 — Minimum Possible Integer After K Adjacent Swaps**  
+    Hard | Stretch
+
+35. **LC 308 — Range Sum Query 2D Mutable**  
+    Hard | P1 | Premium
+
+### Fenwick operations to master
+
+- Point update.
+- Prefix-sum query.
+- Range-sum query.
+- Frequency count by rank.
+- Find smallest index with prefix sum at least a target.
+- Range update through difference-array interpretation.
+- Two-Fenwick range-update/range-query concept.
+
+---
+
+## Pattern 169: Sparse Table
+
+36. **LC  static range minimum implementation practice**  
+    P0 concept  
+    Focus: `O(n log n)` preprocessing and `O(1)` idempotent query.
+
+37. **LC 239 — Sliding Window Maximum**  
+    Hard | P2 alternative  
+    Focus: Compare static RMQ with deque.
+
+38. **LC 1521 — Find a Value of a Mysterious Function Closest to Target**  
+    Hard | Stretch  
+    Focus: Bitwise AND range structure concepts.
+
+39. **LC 2940 — Find Building Where Alice and Bob Can Meet**  
+    Hard | P1  
+    Focus: Range maxima and offline query alternatives.
+
+40. **LC 2736 — Maximum Sum Queries**  
+    Hard | P1  
+    Focus: Offline ordering; compare segment structures.
+
+### Sparse-table requirements
+
+Understand:
+
+- Precompute answers for intervals of length `2^k`.
+- For idempotent operations such as min, max and GCD, overlapping blocks are safe.
+- Ordinary sums cannot use overlapping blocks without correction.
+- Sparse tables are static. Updates invalidate preprocessing.
+
+---
+
+## Pattern 170: Rerooting Dynamic Programming
+
+41. **LC 834 — Sum of Distances in Tree**  
+    Hard | P0
+
+42. **LC 2581 — Count Number of Possible Root Nodes**  
+    Hard | P0
+
+43. **LC 2858 — Minimum Edge Reversals So Every Node Is Reachable**  
+    Hard | P0
+
+44. **LC 2458 — Height After Subtree Removal Queries**  
+    Hard | Stretch
+
+45. **LC 2538 — Difference Between Maximum and Minimum Price Sum**  
+    Hard | Stretch
+
+46. **LC 2925 — Maximum Score After Applying Operations on a Tree**  
+    Hard | P1
+
+47. **LC 2049 — Count Nodes With Highest Score**  
+    Medium | P1
+
+### Rerooting structure
+
+1. Compute child/subtree information.
+2. Compute the answer for one root.
+3. Transfer the root across one edge.
+4. Remove the child-side contribution.
+5. Add the former parent-side contribution.
+6. Continue without recomputing the entire tree.
+
+---
+
+## Pattern 171: Binary Lifting & LCA
+
+48. **LC 1483 — Kth Ancestor of a Tree Node**  
+    Hard | P0
+
+49. **LC 236 — Lowest Common Ancestor of a Binary Tree**  
+    Medium | P0 baseline
+
+50. **LC 235 — LCA of a BST**  
+    Medium | P0 baseline
+
+51. **LC 2846 — Minimum Edge Weight Equilibrium Queries in a Tree**  
+    Hard | Stretch
+
+52. **LC 2277 — Closest Node to Path in Tree**  
+    Hard | Stretch | Premium
+
+53. **LC 2096 — Directions From One Node to Another**  
+    Medium | P1
+
+54. **LC 1740 — Find Distance in a Binary Tree**  
+    Medium | P1 | Premium
+
+55. **Implement binary-lifting LCA**  
+    P0  
+    Required:
+    - Depth array.
+    - `up[node][j]`.
+    - Lift deeper node.
+    - Lift both nodes from high powers downward.
+
+### Complexity target
+
+- Preprocessing: `O(n log n)`
+- K-th ancestor: `O(log n)`
+- LCA query: `O(log n)`
+- Distance query: `O(log n)`
+
+---
+
+## Pattern 172: Subset-Sum Bitset Optimization
+
+56. **LC 416 — Partition Equal Subset Sum**  
+    Medium | P0
+
+57. **LC 1049 — Last Stone Weight II**  
+    Medium | P0
+
+58. **LC 494 — Target Sum**  
+    Medium | P1
+
+59. **LC 805 — Split Array With Same Average**  
+    Hard | Stretch
+
+60. **LC 1755 — Closest Subsequence Sum**  
+    Hard | P1  
+    Focus: Compare bitsets, value DP and MITM.
+
+61. **LC 3181 — Maximum Total Reward Using Operations II**  
+    Hard | Stretch  
+    Focus: Bitset reachable sums with constraints.
+
+62. **LC  bitset subset-sum implementation practice**  
+    P0  
+    Core update:
+
+    `reachable |= reachable << value`
+
+### Bitset benefits
+
+A machine word processes many Boolean DP states simultaneously. This can reduce a conceptual `O(n × target)` Boolean DP by a word-size factor.
+
+Know its limitations:
+
+- Target sum must be reasonably bounded.
+- Reconstruction requires extra information.
+- Counts and minimum costs need more than a Boolean bitset.
+- Language-level arbitrary-size integers may provide convenient bitsets.
+
+---
+
+## Pattern 173: State-Machine Dynamic Programming
+
+### Stock state machines
+
+63. **LC 121 — Best Time to Buy and Sell Stock**  
+    Easy | P0
+
+64. **LC 122 — Best Time to Buy and Sell Stock II**  
+    Medium | P0
+
+65. **LC 123 — Best Time to Buy and Sell Stock III**  
+    Hard | P0
+
+66. **LC 188 — Best Time to Buy and Sell Stock IV**  
+    Hard | P0
+
+67. **LC 309 — Best Time to Buy and Sell Stock with Cooldown**  
+    Medium | P0
+
+68. **LC 714 — Best Time to Buy and Sell Stock with Transaction Fee**  
+    Medium | P0
+
+### Finite-state sequence DP
+
+69. **LC 276 — Paint Fence**  
+    Medium | P1 | Premium
+
+70. **LC 552 — Student Attendance Record II**  
+    Hard | P0
+
+71. **LC 1220 — Count Vowels Permutation**  
+    Hard | P0
+
+72. **LC 935 — Knight Dialer**  
+    Medium | P0
+
+73. **LC 1911 — Maximum Alternating Subsequence Sum**  
+    Medium | P0
+
+74. **LC 376 — Wiggle Subsequence**  
+    Medium | P0
+
+75. **LC 1186 — Maximum Subarray Sum With One Deletion**  
+    Medium | P0
+
+76. **LC 152 — Maximum Product Subarray**  
+    Medium | P0
+
+77. **LC 2116 — Check if Parentheses String Can Be Valid**  
+    Medium | P1
+
+### State-machine derivation
+
+For stock problems, define states such as:
+
+- Not holding.
+- Holding.
+- Just sold.
+- Cooldown.
+- Number of completed transactions.
+
+For general finite-state DP:
+
+1. List all meaningful statuses.
+2. Draw legal transitions.
+3. Attach gain or cost to each transition.
+4. Identify starting states.
+5. Identify valid terminal states.
+6. Remove transitions that would reuse updated values incorrectly.
+
+---
+
+# Combined Strict P0 Core
+
+## Section 10
+
+- LC 23, 215, 218, 264, 295
+- LC 347, 373, 378, 407
+- LC 480, 502, 621, 630, 632
+- LC 703, 743, 767, 778
+- LC 857, 871, 895, 973
+- LC 1354, 1383, 1438, 1514
+- LC 1642, 1675, 1696, 1834
+- LC 1882, 1942, 2034, 2102
+- LC 2208, 2353, 2402, 2462
+
+## Section 14
+
+- LC 28, 214, 336, 425
+- LC 459, 472, 745, 820
+- LC 1032, 1044, 1268, 1392
+- LC 1804, 2156, 2223, 2416
+- LC 3008, 3031
+
+## Section 15
+
+- LC 50, 149, 204, 223
+- LC 365, 380, 381, 382, 384
+- LC 398, 447, 470, 497
+- LC 528, 587, 710
+- LC 939, 1041, 1071, 1497, 2183
+
+## Section 16
+
+- DFS augmenting-path bipartite matching
+- Source-left-right-sink flow modeling
+- Dinic conceptual implementation
+- Node splitting
+- Min-cut interpretation
+
+## Section 17
+
+- LC 146, 155, 173, 208
+- LC 211, 225, 232, 271
+- LC 284, 295, 297, 341
+- LC 352, 355, 362, 380
+- LC 381, 432, 449, 460
+- LC 535, 588, 622, 641, 642
+- LC 677, 705, 706, 715
+- LC 729, 731, 732
+- LC 895, 933, 981
+- LC 1146, 1172, 1206
+- LC 1348, 1352, 1472
+- LC 1804, 1825, 2034
+- LC 2102, 2276, 2296, 2353, 2642
+
+## Section 18
+
+- LC 121, 122, 123, 188
+- LC 236, 307, 309, 315
+- LC 327, 332, 416, 493
+- LC 552, 834, 1049
+- LC 1192, 1220, 1483
+- LC 1649, 1696, 1755
+- LC 2035, 2097, 2179
+- LC 2426, 2581, 2858
+
+---
+
+# Recommended Study Order
+
+## Phase 1: Heap foundations
+
+1. LC 215
+2. LC 703
+3. LC 347
+4. LC 973
+5. LC 23
+6. LC 373
+7. LC 295
+8. LC 621
+9. LC 1834
+10. LC 1882
+11. LC 2402
+12. LC 632
+
+## Phase 2: Composite design
+
+1. LC 705
+2. LC 706
+3. LC 380
+4. LC 155
+5. LC 232
+6. LC 146
+7. LC 341
+8. LC 981
+9. LC 1146
+10. LC 355
+11. LC 460
+12. LC 715
+13. LC 432
+14. LC 2642
+
+## Phase 3: Advanced strings
+
+1. LC 28
+2. LC 459
+3. LC 1392
+4. LC 214
+5. LC 187
+6. LC 1044
+7. LC 2223
+8. LC 212
+9. LC 336
+10. LC 745
+11. LC 1032
+12. LC 3008
+
+## Phase 4: Geometry and randomization
+
+1. LC 50
+2. LC 204
+3. LC 149
+4. LC 1232
+5. LC 447
+6. LC 939
+7. LC 587
+8. LC 384
+9. LC 528
+10. LC 470
+11. LC 382
+12. LC 710
+
+## Phase 5: Additional advanced structures
+
+1. Coordinate compression with LC 315
+2. Fenwick tree with LC 307
+3. Offline counting with LC 1649
+4. Meet-in-the-middle with LC 1755
+5. Eulerian traversal with LC 332
+6. Directed Eulerian path with LC 2097
+7. SCC implementation
+8. Sparse Table implementation
+9. Rerooting with LC 834
+10. Binary lifting with LC 1483
+11. Bitset subset sum with LC 416
+12. State-machine DP with the stock series
+
+## Phase 6: Flow and selective advanced material
+
+1. DFS bipartite matching
+2. Flow-network construction
+3. Dinic implementation
+4. Minimum-cut modeling
+5. Manacher implementation
+6. Advanced convex hull
+7. Advanced rolling hash
+8. Advanced SCC and low-link problems
+
+---
+
+# Advanced Google L5 Final Set
+
+Complete these under timed conditions:
+
+1. LC 23 — Merge k Sorted Lists
+2. LC 149 — Max Points on a Line
+3. LC 188 — Best Time to Buy and Sell Stock IV
+4. LC 214 — Shortest Palindrome
+5. LC 218 — Skyline
+6. LC 295 — Median Finder
+7. LC 315 — Count Smaller After Self
+8. LC 327 — Count of Range Sum
+9. LC 332 — Reconstruct Itinerary
+10. LC 336 — Palindrome Pairs
+11. LC 381 — Randomized Collection
+12. LC 425 — Word Squares
+13. LC 432 — All O`one
+14. LC 460 — LFU Cache
+15. LC 480 — Sliding Window Median
+16. LC 493 — Reverse Pairs
+17. LC 502 — IPO
+18. LC 552 — Student Attendance Record II
+19. LC 587 — Erect the Fence
+20. LC 588 — In-Memory File System
+21. LC 630 — Course Schedule III
+22. LC 632 — Smallest Range Covering K Lists
+23. LC 642 — Autocomplete System
+24. LC 710 — Random Pick with Blacklist
+25. LC 715 — Range Module
+26. LC 745 — Prefix and Suffix Search
+27. LC 753 — Cracking the Safe
+28. LC 857 — Minimum Cost to Hire Workers
+29. LC 871 — Minimum Refueling Stops
+30. LC 895 — Frequency Stack
+31. LC 1044 — Longest Duplicate Substring
+32. LC 1172 — Dinner Plate Stacks
+33. LC 1192 — Critical Connections
+34. LC 1206 — Skiplist
+35. LC 1354 — Construct Target Array
+36. LC 1397 — Find All Good Strings
+37. LC 1439 — Kth Smallest Matrix Sum
+38. LC 1489 — Critical and Pseudo-Critical MST Edges
+39. LC 1505 — Minimum Integer After Adjacent Swaps
+40. LC 1649 — Create Sorted Array
+41. LC 1755 — Closest Subsequence Sum
+42. LC 1825 — MKAverage
+43. LC 1923 — Longest Common Subpath
+44. LC 1948 — Delete Duplicate Folders
+45. LC 1960 — Maximum Product of Palindromes
+46. LC 2035 — Partition Array to Minimize Difference
+47. LC 2097 — Valid Arrangement of Pairs
+48. LC 2102 — SOR Tracker
+49. LC 2179 — Count Good Triplets
+50. LC 2296 — Text Editor
+51. LC 2426 — Pairs Satisfying Inequality
+52. LC 2458 — Height After Subtree Removal
+53. LC 2581 — Count Possible Root Nodes
+54. LC 2642 — Design Graph
+55. LC 2846 — Tree Path Equilibrium Queries
+56. LC 2858 — Minimum Edge Reversals
+57. LC 3045 — Prefix and Suffix Pairs II
+
+---
+
+# Combined Completion Target
+
+For these six sections:
+
+- Solve approximately **180–210 unique questions**.
+- Complete every accessible P0 problem.
+- Re-solve at least **55 P0 problems** after a two-week gap.
+- Complete at least **20 Stretch problems**.
+- Implement the following from a blank editor:
+  - Binary heap usage patterns
+  - Two-heap median
+  - Lazy heap deletion
+  - K-way merge
+  - KMP
+  - Z-algorithm
+  - Rolling hash
+  - Convex hull
+  - Fisher-Yates
+  - Reservoir sampling
+  - LRU cache
+  - LFU cache
+  - Trie
+  - Range Module
+  - Fenwick tree
+  - Sparse Table
+  - Hierholzer’s algorithm
+  - Kosaraju or Tarjan SCC
+  - Binary lifting
+  - Rerooting DP
+  - Stock state-machine DP
+  - Basic augmenting-path matching
+
+## Priority across the combined sections
+
+### Highest priority
+
+1. Heaps and scheduling
+2. Composite data-structure design
+3. Fenwick tree and coordinate compression
+4. Eulerian traversal
+5. Binary lifting and rerooting
+6. State-machine DP
+7. KMP, Z and trie-assisted matching
+
+### Medium priority
+
+8. Rolling hash
+9. Geometry fundamentals
+10. Randomization and reservoir sampling
+11. SCC
+12. Meet-in-the-middle
+13. Bitset subset sum
+
+### Selective advanced priority
+
+14. Sparse Table
+15. Manacher
+16. Convex hull edge cases
+17. Bipartite matching
+18. Dinic and minimum-cut modeling
+
+The final standard is not merely knowing each algorithm separately. You should be able to compare competing techniques. For example, top-K may use a heap, bucket sort or Quickselect; range counting may use sorting, Fenwick trees or segment trees; string search may use KMP, Z, hashing or a trie; and assignment may use greedy matching, bitmask DP, bipartite matching or flow.
