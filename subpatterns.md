@@ -236,3 +236,18 @@
 161. **Hierarchical File Systems**
 162. **Mutable Graph APIs**
 163. **Final Composite Design Problems**
+
+
+
+Add these ten primary patterns:
+
+164. Coordinate Compression  
+165. Meet-in-the-Middle  
+166. Eulerian Paths, Circuits & Edge-Consumption Traversal  
+167. Strongly Connected Components  
+168. Fenwick Tree / Binary Indexed Tree  
+169. Sparse Table & Static Idempotent Queries  
+170. Rerooting Dynamic Programming  
+171. Binary Lifting & Lowest Common Ancestor  
+172. Subset-Sum Bitset Optimization  
+173. State-Machine Dynamic Programming  
